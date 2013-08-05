@@ -1,0 +1,165 @@
+.kc-lib{
+	
+}
+.kc-lib .inner{
+	width:1000px;
+	margin:48px auto;
+}
+.kc-lib .inner .siderbar{
+	width:236px;
+	border:1px solid #ccc;
+	float: left;
+}
+.kc-lib .inner .siderbar li{
+	display: block;
+	width:236px;
+	height:42px;
+	line-height: 42px;
+	text-indent: 20px;
+	font-family: Microsoft Yahei;
+	font-size: 14px;
+	border-bottom:1px solid #ccc;
+}
+.kc-lib .inner .siderbar .banner{
+	height:100px;
+	line-height: 100px;
+	font-size: 30px;
+	color:#666;
+	text-indent: -30px;
+	text-align: center;
+}
+.kc-lib .inner .siderbar li a{
+	color:#666;
+	text-decoration: none;
+	display: block;
+	height:42px;
+	font-style: normal;
+}
+.kc-lib .inner .siderbar li a i{
+	display: block;
+	float: right;
+	width:42px;
+	height:42px;
+}
+.kc-lib .inner .siderbar li a:hover,.kc-lib .inner .siderbar li.cur a{
+	font-weight: bold;
+	background: #eee
+}
+.kc-lib .inner .siderbar li a.linechart i{
+	background: url('http://img01.taobaocdn.com/tps/i1/T1SpiHXxVgXXXGMTY8-202-318.png') no-repeat  4px -113px;
+}
+/*.kc-lib .inner .siderbar li a.linechart:hover i,.kc-lib .inner .siderbar li.cur a.linechart i{
+	background: url('http://img01.taobaocdn.com/tps/i1/T1SpiHXxVgXXXGMTY8-202-318.png') no-repeat  -60px -113px;
+}*/
+.kc-lib .inner .siderbar li a.barchart i{
+	background: url('http://img01.taobaocdn.com/tps/i1/T1SpiHXxVgXXXGMTY8-202-318.png') no-repeat  0px 3px;
+}
+.kc-lib .inner .siderbar li a.piechart i{
+	background: url('http://img01.taobaocdn.com/tps/i1/T1SpiHXxVgXXXGMTY8-202-318.png') no-repeat   2px -177px;
+}
+.kc-lib .inner .siderbar li a.scatterchart i{
+	background: url('http://img01.taobaocdn.com/tps/i1/T1SpiHXxVgXXXGMTY8-202-318.png') no-repeat -51px -53px;
+}
+.kc-lib .inner .siderbar li a.dashboard i{
+	background: url('http://img01.taobaocdn.com/tps/i1/T1SpiHXxVgXXXGMTY8-202-318.png') no-repeat  -51px -227px;
+}
+.kc-lib .inner .siderbar li a.mapchart i{
+	background:url('http://img01.taobaocdn.com/tps/i1/T1SpiHXxVgXXXGMTY8-202-318.png') no-repeat  5px -282px;
+}
+.kc-lib .inner .siderbar li a.sumdetailchart i{
+	background: url('http://img01.taobaocdn.com/tps/i1/T1SpiHXxVgXXXGMTY8-202-318.png') no-repeat  2px -226px;
+}
+.kc-lib .inner .siderbar li a.timeline i{
+	background:url('http://img01.taobaocdn.com/tps/i1/T1SpiHXxVgXXXGMTY8-202-318.png') no-repeat   -54px -177px;
+}
+.kc-lib .inner .sidercontent{
+	width:750px;
+	float: right;
+}
+.kc-lib .inner .btn-container{
+	float: left;
+}
+.kc-lib .inner .btn-container .btn-gen{
+	display: block;
+	width:231px;
+	height:41px;
+	line-height: 41px;
+	text-align: center;
+	font-family: Microsoft Yahei;
+	color:#fff;
+	float: left;
+	font-size: 14px;
+	margin:32px 0px 0px 0px;
+	background: url('http://img02.taobaocdn.com/tps/i2/T122OSXCheXXcLhOvo-231-41.png') no-repeat;
+}
+.kc-lib .inner .btn-container .btn-doc{
+	display: block;
+	font-size: 14px;
+	width:236px;
+	height:42px;
+	line-height: 42px;
+	text-align: center;
+	font-family: Microsoft Yahei;
+	color:#444;
+	float: right;
+	margin:32px 0px 0px 10px;
+	background: url('http://img02.taobaocdn.com/tps/i2/T1fhuUXDVbXXarmJ2q-236-42.png') no-repeat;
+}
+.kc-lib .inner .demo-container{
+	width:750px;
+	border:1px solid #ccc;
+	height:330px;
+	float: right;
+	overflow: hidden;
+}
+.kc-lib .inner .demo-container .open-new{
+	position: absolute;
+	z-index: 9999;
+	color:#444;
+	margin:5px 0px 0px 680px;
+	color:#999;
+}
+.
+.kc-lib .inner .demo-container .open-new:hover{
+	color:#f60;
+}
+.kc-lib .inner .demo-container .chart-container{
+	width:750px;
+}
+.kc-lib .inner .demo-container .chart-container iframe{
+	width:750px;
+	margin-top: 28px;
+	height:300px;
+	overflow: hidden;
+}
+.kc-lib .inner .demo-container .prev,.kc-lib .inner .demo-container .next{
+	position: absolute;
+	z-index: 10;
+	cursor: pointer;
+	display: none;
+}
+.kc-lib .inner .demo-container .prev{
+	margin:0px 0px 0px 0px;
+}
+.kc-lib .inner .demo-container .next{
+	margin-left:700px;
+}
+.kc-lib .inner .demo-container .ks-switchable-nav{
+	text-align: center;
+	position: relative;
+	margin-top: 5px;
+	z-index: 1;
+}
+.kc-lib .inner .demo-container .ks-switchable-nav li{
+	display: inline;
+	padding:5px 10px;
+	border:1px solid #f7f7f7;
+	color:#666;
+	cursor: pointer;
+	margin: 2px;
+	font-style: normal;
+}
+.kc-lib .inner .demo-container .ks-switchable-nav .ks-active{
+	background: #80adca;
+	color:#fff;
+}

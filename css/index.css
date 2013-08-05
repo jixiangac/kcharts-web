@@ -1,0 +1,491 @@
+.kc-header{
+	height:78px;
+	font-family: Microsoft Yahei;
+	border-bottom: 1px solid #ccc;
+	-moz-box-shadow:0px 0px 3px #ccc; 
+	-webkit-box-shadow:0px 0px 3px #ccc; 
+	box-shadow:0px 0px 3px #ccc; 
+	position: relative;
+	z-index: 99;
+	background: #fff;
+	width:100%;
+}
+.kc-header .inner{
+	width:1000px;
+	height:78px;
+	margin:0px auto;
+	background: url('http://img02.taobaocdn.com/tps/i2/T1TQygXEteXXXr6JI6-109-50.png') no-repeat 0px 13px;
+}
+.kc-header .inner .nav{
+	margin:0px 0px 0px 200px;
+	padding-top:20px;
+	position: absolute;
+}
+.kc-header .inner .nav li{
+	display: block;
+	float: left;
+	width:82px;
+	height:40px;
+	line-height: 40px;
+	text-align: center;
+	font-size: 16px;
+}
+.hidden{
+	display: none;
+}
+.kc-header .inner .nav li a{
+	color:#000;
+	text-decoration: none;
+}
+.kc-header .inner .nav li.cur{
+	border-bottom: 3px solid #74aed2;
+}
+.kc-header .inner .nav li.cur a{
+	color:#000;
+}
+
+.kc-header .inner .nav-right{
+	float: right;
+	position: static;
+}
+.tab-nav{
+	position: absolute;
+	margin:495px 0px 0px 650px;
+	width:70px;
+	height: 22px;
+	z-index: 2;
+}
+.tab-nav li{
+	display: block;
+	float: left;
+	width:23px;
+	height:22px;
+	background: url('http://img04.taobaocdn.com/tps/i4/T1dAmVXx4cXXXjO9De-40-18.png') no-repeat -19px 0px;
+	text-indent: -9999px;
+	overflow: hidden;
+}
+.tab-nav li.current{
+	background: url('http://img04.taobaocdn.com/tps/i4/T1dAmVXx4cXXXjO9De-40-18.png') no-repeat 2px 0px;
+}
+.kc-banner{
+	margin:0px auto;
+	position: relative;
+	z-index: -2;
+	height:540px;
+}
+.tab-content{
+	height:540px;
+	overflow: hidden;
+	position: relative;
+}
+.kc-banner img{
+	width:100%;
+	display: block;
+	height: 540px;
+}
+
+.kc-menubar{
+	background: #fff;
+	height:78px;
+}
+.kc-menubar .inner{
+	width:1000px;
+	margin:0px auto;
+}
+.kc-menubar .inner ul li{
+	display: block;
+	float: left;
+	width:250px;
+	background: url('http://img03.taobaocdn.com/tps/i3/T1nMJ7XvhcXXXeCKDX-15-15.png') no-repeat center 14px;
+}
+.kc-menubar .inner ul li a{
+	display: block;
+	width:250px;
+	height:70px;
+	line-height: 70px;
+	text-decoration: none;
+	text-align: center;
+	float: left;
+	font-family: Microsoft Yahei;
+	color:#666;
+	font-size: 14px;
+}
+.kc-menubar .inner .hide-content{
+	width:228px;
+	height:289px;
+	border-left:1px solid #ccc;
+	border-right:1px solid #ccc;
+	position: absolute;
+	z-index: -1;
+	background: #fff;
+	padding:10px;
+	font-family: Microsoft Yahei;
+	color:#666;
+	opacity:0;
+}
+.kc-menubar .inner .hide-content h3{
+	font-size: 16px;
+	font-weight: bold;
+	line-height: 24px;
+}
+.kc-menubar .inner .hide-content p{
+	padding:10px 0px;
+	font-size: 14px;
+}
+.color1{
+	border-top: 8px solid #e4c195;
+}
+.color2{
+	border-top: 8px solid #bcd1a0;
+}
+.color3{
+	border-top: 8px solid #88c5dd;
+}
+.color4{
+	border-top: 8px solid #dabed0;
+}
+
+
+.kc-main-content{
+
+}
+.kc-main-content .inner{
+	width:1000px;
+	margin:0px auto;
+}
+.kc-main-content .inner h1{
+	font-size: 24px;
+	font-family: Microsoft Yahei;
+	color:#000;
+	font-weight: normal;
+	padding-top: 10px;
+	padding-left: 40px;
+}
+.kc-main-content .inner h6{
+	color:#666;
+	font-family: Microsoft Yahei;
+	font-size: 14px;
+	font-weight: normal;
+	padding-bottom: 10px;
+	padding-left: 40px;
+}
+.kc-main-content .inner .preview{
+	background: #f5f5f5;
+	margin-top: 20px;
+	width:917px;
+	display: block;
+	margin:0px auto;
+}.kc-main-content .inner .preview iframe{
+	border:none;
+}
+.kc-main-content .inner .chart-list{
+	height:130px;
+	overflow: hidden;
+	padding: 0px 0px 44px 0px;
+	text-align: center;
+}
+.kc-main-content .inner .chart-list .scrollable{
+	height: 130px;
+}
+.kc-main-content .inner .chart-list .ks-switchable-content{
+	overflow: hidden;
+}
+.kc-main-content .inner .chart-list .ks-switchable-nav{
+	display: none;
+}
+.kc-main-content .inner .chart-list .ks-switchable-content .chart-icon{
+	width:130px;
+	height:130px;
+	border-right:1px solid #ccc;
+}
+.kc-main-content .inner .chart-list .ks-switchable-content a{
+	width:130px;
+	height:130px;
+	display: block;
+}
+.kc-main-content .inner .chart-list .ks-switchable-content .linechart a{
+	background: url('http://img03.taobaocdn.com/tps/i3/T1bGmkXphhXXckL6Z0-130-130.png') no-repeat;
+}
+.kc-main-content .inner .chart-list .ks-switchable-content .linechart a:hover,.kc-main-content .inner .chart-list .ks-switchable-content .linechart .cur{
+	background: url('http://img04.taobaocdn.com/tps/i4/T10a1lXzhbXXckL6Z0-130-130.png') no-repeat;
+}
+.kc-main-content .inner .chart-list .ks-switchable-content .barchart a{
+	background: url('http://img01.taobaocdn.com/tps/i1/T1pR1kXuXeXXckL6Z0-130-130.png') no-repeat;
+}
+.kc-main-content .inner .chart-list .ks-switchable-content .barchart a:hover,.kc-main-content .inner .chart-list .ks-switchable-content .barchart .cur{
+	background: url('http://img02.taobaocdn.com/tps/i2/T1uVemXAdaXXckL6Z0-130-130.png') no-repeat;
+}
+.kc-main-content .inner .chart-list .ks-switchable-content .piechart a{
+	background: url('http://img01.taobaocdn.com/tps/i1/T1IjmkXsheXXckL6Z0-130-130.png') no-repeat;
+}
+.kc-main-content .inner .chart-list .ks-switchable-content .piechart a:hover,.kc-main-content .inner .chart-list .ks-switchable-content .piechart .cur{
+	background: url('http://img04.taobaocdn.com/tps/i4/T1EcGmXx0XXXckL6Z0-130-130.png') no-repeat;
+}
+.kc-main-content .inner .chart-list .ks-switchable-content .dashboard a{
+	background: url('http://img01.taobaocdn.com/tps/i1/T1lsWkXuXgXXckL6Z0-130-130.png') no-repeat;
+}
+.kc-main-content .inner .chart-list .ks-switchable-content .dashboard a:hover,.kc-main-content .inner .chart-list .ks-switchable-content .dashboard .cur{
+	background: url('http://img02.taobaocdn.com/tps/i2/T1VdulXzXcXXckL6Z0-130-130.png') no-repeat;
+}
+.kc-main-content .inner .chart-list .ks-switchable-content .scatterchart a{
+	background: url('http://img03.taobaocdn.com/tps/i3/T1Wt1kXpJfXXckL6Z0-130-130.png') no-repeat;
+}
+.kc-main-content .inner .chart-list .ks-switchable-content .scatterchart a:hover,.kc-main-content .inner .chart-list .ks-switchable-content .scatterchart .cur{
+	background: url('http://img01.taobaocdn.com/tps/i1/T1sPCmXwReXXckL6Z0-130-130.png') no-repeat;
+}
+.kc-main-content .inner .chart-list .ks-switchable-content .ratiochart a{
+	background: url('http://img02.taobaocdn.com/tps/i2/T1SxylXE0bXXckL6Z0-130-130.png') no-repeat;
+}
+.kc-main-content .inner .chart-list .ks-switchable-content .ratiochart a:hover,.kc-main-content .inner .chart-list .ks-switchable-content .ratiochart .cur{
+	background: url('http://img04.taobaocdn.com/tps/i4/T1xYemXqxaXXckL6Z0-130-130.png') no-repeat;
+}
+.kc-main-content .inner .chart-list .ks-switchable-content .mapchart a{
+	background: url('http://img01.taobaocdn.com/tps/i1/T1rRajXv8gXXckL6Z0-130-130.png') no-repeat;
+}
+.kc-main-content .inner .chart-list .ks-switchable-content .mapchart a:hover,.kc-main-content .inner .chart-list .ks-switchable-content .mapchart .cur{
+	background: url('http://img02.taobaocdn.com/tps/i2/T1M548XrXhXXckL6Z0-130-130.png') no-repeat;
+}
+.kc-main-content .inner .chart-list .prev,.kc-main-content .inner .chart-list .next{
+	display: block;
+	position: absolute;
+	width:40px;
+	height:130px;
+	z-index: 1;
+	font-size: 40px;
+	line-height: 115px;
+	font-family: arial;
+	cursor: pointer;
+	text-indent: -9999px;
+	overflow: hidden;
+}
+.kc-main-content .inner .chart-list .prev{
+	background: url('http://img02.taobaocdn.com/tps/i2/T1Il1nXsFdXXXwQTje-40-82.png') no-repeat 0px 24px;
+}
+.kc-main-content .inner .chart-list .prev:hover{
+	background: url('http://img03.taobaocdn.com/tps/i3/T16yClXxliXXXwQTje-40-82.png') no-repeat -3px 25px;
+}
+.kc-main-content .inner .chart-list .next{
+	margin-left: 960px;
+	background: url('http://img01.taobaocdn.com/tps/i1/T1oVGnXphgXXXwQTje-40-82.png') no-repeat 0px 24px;
+}
+.kc-main-content .inner .chart-list .next:hover{
+	margin-left: 960px;
+	background: url('http://img03.taobaocdn.com/tps/i3/T15cubXsVjXXXwQTje-40-82.png') no-repeat 0px 25px;
+}
+
+.kc-main-content .see-all{
+	display: block;
+	width:100px;
+	text-align: right;
+	padding-right: 10px;
+	position: absolute;
+	margin:-29px 0px 0px 859px;
+	font-family: Microsoft Yahei;
+	text-decoration: none;
+	font-size: 14px;
+	color:#666;
+}
+.kc-main-content .see-all:hover{
+	color:#f60;
+}
+
+
+.kc-main-content .inner .chart-list .scroller{
+	width:920px;
+	margin-left: 40px;
+	overflow: hidden;
+	height: 130px;
+}
+
+.kc-apps-center{
+	background: #e6e6e6;
+}
+.kc-apps-center .inner{
+	width:1000px;
+	margin:0px auto;
+}
+.kc-apps-center .inner h1{
+	font-size: 16px;
+	line-height: 30px;
+	font-family: Microsoft Yahei;
+	color: #000;
+	line-height: 76px;
+	text-align: center;
+}
+.kc-apps-center .inner .wrapper{
+}
+.kc-apps-center .inner .wrapper ul{
+	width:1025px;
+	margin-left: -25px;
+}
+.kc-apps-center .inner .wrapper ul li{
+	display: block;
+	float: left;
+	width:176px;
+	height: 80px;
+	margin:10px 0px 0px 25px;
+}
+.kc-apps-center .inner .wrapper ul li img{
+	width:176px;
+	height: 80px;
+}
+.kc-apps-center .contect-wrapper{
+	height:100px;
+	text-align: center;
+	padding-top: 70px;
+}
+.kc-apps-center .contect-wrapper .contect-us{
+	width:141px;
+	height:29px;
+	overflow: hidden;
+	text-indent: -9999px;
+	background: url("http://img01.taobaocdn.com/tps/i1/T1vl09XDlhXXargrva-141-29.png") no-repeat;
+	display: inline-block;
+	*display: inline;
+	*zoom:1;
+}
+.kc-apps-center .contect-wrapper{
+	font-family: Microsoft Yahei;
+	font-size: 14px;
+	color:#888;
+}
+
+.kc-bottom-banner{
+	padding-bottom: 122px;
+}
+.kc-bottom-banner .inner{
+	width:1000px;
+	margin:0px auto;
+}
+.kc-bottom-banner .inner h1{
+	height: 144px;
+	line-height: 160px;
+	font-size: 20px;
+	font-family: Microsoft Yahei;
+	color: #666;
+	font-weight: normal;
+	text-align: center;
+}
+.kc-bottom-banner .inner .item{
+	width:499px;
+	height: 190px;
+	font-family: Microsoft Yahei;
+	font-size: 14px;
+}
+.kc-bottom-banner .inner .item h3{
+	margin: 50px 0px 10px 0px;
+	padding-left: 120px;
+	text-align: left;
+	font-size: 24px;
+	font-weight: normal;
+}
+.kc-bottom-banner .inner .item p{
+	padding: 0px 80px 0px 121px ;
+	font-size: 12px;
+}
+.kc-bottom-banner .inner .left{
+	float:left;
+	background:#fff url('http://img04.taobaocdn.com/tps/i4/T1W0CnXyFcXXafycnp-82-92.png') no-repeat  0px center;
+}
+.kc-bottom-banner .inner .right{
+	float: right;
+	background:#fff url('http://img02.taobaocdn.com/tps/i2/T1UgKmXvXfXXcQvQI8-119-92.png') no-repeat  0px center;
+}
+
+
+.kc-footer{
+	background: #333;
+	color:#fff;
+	text-align: center;
+}
+.kc-footer .inner{
+	height:306px;
+	width:1000px;
+	margin:0px auto;
+	padding-top: 49px;
+}
+.kc-footer .inner .bg-line{
+	border-bottom:1px solid #484848;
+	position: absolute;
+	height:20px;
+	width:1000px;
+}
+.kc-footer .inner .type-list{
+	width:1100px;
+	height: 70px;
+	margin-top: 10px;
+	padding-top: 10px;
+	background:  url('http://img01.taobaocdn.com/tps/i1/T1yBCTXBhdXXbs6O2v-999-34.png') no-repeat -5px 0px; 
+}
+.kc-footer .inner .type-list li{
+	display: block;
+	float: left;
+	width:91.2px;
+	height:70px;
+	color:#ccc;
+	font-size: 14px;
+	font-family: Microsoft Yahei;
+	text-align: center;
+	line-height: 100px;
+	
+}
+.kc-footer .inner .type-list li.linechart{
+	background-position: 8px 0px;
+}
+.kc-footer .inner .type-list li.barchart{
+	background-position: -83px 0px;
+}
+.kc-footer .inner .type-list li.barchart2{
+	background-position: -176px 0px;
+}
+.kc-footer .inner .type-list li.piechart{
+	background-position: -268px 0px;
+}
+.kc-footer .inner .type-list li.grid{
+	background-position: -360px 0px;
+}
+.kc-footer .inner .type-list li.sumdetail{
+	background-position: -452px 0px;
+}
+.kc-footer .inner .type-list li.scatterchart{
+	background-position: -543px 0px;
+}
+.kc-footer .inner .type-list li.radar{
+	background-position: -635px 0px;
+}
+.kc-footer .inner .type-list li.timeline{
+	background-position: -727px 0px;
+}
+.kc-footer .inner .type-list li.dashboard{
+	background-position: -817px 0px;
+}
+.kc-footer .inner .type-list li.mapchart{
+	background-position: -910px 0px;
+}
+.kc-footer .inner i{
+	width:140px;
+	height:48px;
+	display: block;
+	position: relative;
+	margin:0px auto;
+	z-index: 1;
+	text-align: center;
+	background: #7f7f7f;
+	background: url('http://img04.taobaocdn.com/tps/i4/T1wASVXtVXXXXlEmbX-140-48.png') no-repeat;
+}
+
+.kc-footer .inner .powerby{
+	color:#ccc;
+	line-height: 50px;
+	font-family: Microsoft Yahei;
+}
+
+.clearfix{zoom:1;}
+.clearfix:after{
+    content:"";
+    display:block;
+    height:0;
+    line-height:0;
+    clear:both;
+    visibility:hidden;
+}
