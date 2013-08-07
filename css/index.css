@@ -19,7 +19,8 @@
 .kc-header .inner .nav{
 	margin:0px 0px 0px 200px;
 	padding-top:20px;
-	position: absolute;
+	position: relative;
+	height: 40px;
 }
 .kc-header .inner .nav li{
 	display: block;
@@ -29,19 +30,31 @@
 	line-height: 40px;
 	text-align: center;
 	font-size: 16px;
+	position: relative;
+	z-index: 2;
 }
 .hidden{
 	display: none;
 }
 .kc-header .inner .nav li a{
+	display: inline-block;
+	width: 82px; height: 40px;
 	color:#000;
 	text-decoration: none;
 }
 .kc-header .inner .nav li.cur{
-	border-bottom: 3px solid #74aed2;
+	/*border-bottom: 3px solid #74aed2;*/
 }
 .kc-header .inner .nav li.cur a{
 	color:#000;
+}
+
+.kc-header .inner .nav li.box{
+	position:absolute;
+ 	left:0px; top: 20px; 
+ 	border-bottom: 3px solid #74aed2;
+ 	z-index:1;
+
 }
 
 .kc-header .inner .nav-right{
