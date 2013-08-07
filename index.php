@@ -15,7 +15,7 @@
         </div>
         <!--一般情况下，需要指定默认情况非首帧是否显示-->
         <div class="tab-pannel hidden">
-           <img src="http://img02.taobaocdn.com/tps/i2/T1qz9UXAleXXa_hgjH-1500-641.png">
+           <img src="http://img02.taobaocdn.com/tps/i2/T1t3R_FcdfXXa_hgjH-1500-641.png">
         </div>
         <div class="tab-pannel hidden">
            <img src="http://img03.taobaocdn.com/tps/i3/T1b6GUXwXfXXa_hgjH-1500-641.png">
