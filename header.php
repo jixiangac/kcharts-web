@@ -17,12 +17,12 @@
 <body>
 <div class="kc-header">
 	<div class="inner">
-		<ul class="nav">
+		<ul class="nav" id="nav">
 <?php
 $location = $_SERVER['PHP_SELF'];
 if(strstr($location, "index.php")){
 ?>
-	<li class="cur"><a href="index.php">首页</a></li>
+	<li class="cur"	><a href="index.php">首页</a></li>
 <?php	
 }else{
 ?>
@@ -63,8 +63,9 @@ if(strstr($location, "index.php")){
 }
 ?>
 <li><a href="https://github.com/kissygalleryteam/kcharts" target="_blank">github</a></li>
+<li class="box"></li>
 </ul>
-
+<script type="text/javascript" src="js/navigator.js"></script>
 	</div>
 
 </div>

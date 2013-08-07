@@ -14,6 +14,9 @@
 	$("li",$("#J_MenuBar")).on("mouseleave",function(e){
 		$(".hide-content",$(e.currentTarget)).stop().animate({marginTop:0,opacity:0},0.3,"easeIn");
 	});
+
+  
+
   KISSY.use('gallery/slide/1.1/',function(S,Slide){
     var s = new Slide('JSlide',{
       triggerSelector:'li',//触碰节点为a
@@ -24,7 +27,7 @@
         speed:700,
         selectedClass:'current'
     });
-
+    
    
   });
 
@@ -53,6 +56,6 @@
        		$("a",$("#J_ChartIcons")).removeClass("cur");
        		$a.addClass("cur");
        });
-
+       
 });
 })(KISSY);
