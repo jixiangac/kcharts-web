@@ -5,7 +5,7 @@
 	switch ($method) {
 		case 'getDemoUrls':
 			$chartType = isset($_GET['type']) ? $_GET['type'] : "linechart";
-			$all_files = scandir("../gallery/kcharts/1.1/demo/".$chartType."/");
+			$all_files = scandir("./demos/1.1/demo/".$chartType."/");
 			
 			$files = array_splice($all_files, 2);
 			$__files = array();
