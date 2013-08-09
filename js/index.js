@@ -31,24 +31,40 @@
 
   //轮播
   (function(){
+    var oJSlide=$('#JSlide')[0];
     var aBtn=$('#JSlide li');
-    var oDiv=$('#JSlide .tab-content')
+    var oDiv=$('#JSlide .tab-content')[0];
     var aDiv=$('#JSlide .tab-pannel');
-    
     var cWidth=document.documentElement.clientWidth;
-    
-    window.onload=window.onresize=function(){
-      for(var i=0;i<aDiv.length;i++){
-       
-        aDiv[i].style.width=cWidth+'px';
-      }
-    }
-    
+    var now=0;
     for(var i=0;i<aBtn.length;i++){
       aBtn[i].index=i;
-      aBtn[i].onmouseover=function(){
-        startMove(oDiv,{left:this.index*cWidth})
+      aBtn[i].onclick=function(){
+        now=this.index;
+        tab();
       }
+    }
+    function tab(){
+      for(var i=0;i<aBtn.length;i++){
+        aBtn[i].className='';
+      }
+      aBtn[now].className='selected';
+      startMove(oDiv,{left:-now*cWidth});
+    }
+
+    function toNext(){
+      now++;
+      if(now==aBtn.length)now=0;
+      tab();
+    }
+
+    var timer=setInterval(toNext,3000);
+    oJSlide.onmouseover=function(){
+      clearInterval(timer);
+    }
+
+    oJSlide.onmouseout=function(){
+      timer=setInterval(toNext,3000);
     }
   })();
 

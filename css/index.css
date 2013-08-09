@@ -76,6 +76,7 @@
 	background: url('http://img04.taobaocdn.com/tps/i4/T1dAmVXx4cXXXjO9De-40-18.png') no-repeat -19px 0px;
 	text-indent: -9999px;
 	overflow: hidden;
+	cursor: pointer;
 }
 
 .tab-nav li.selected{
@@ -88,16 +89,25 @@
 
 .slide-style{
 	position: relative;
-
+	overflow: hidden;
 	height:540px;
+	width: 1349px;
 }
 
 .tab-content{
 	height:540px;
-	overflow: hidden;
+	width: 4047px;
 	position: absolute;
-	left: 0; top: 0;
+	left: 0px; top: 0px;
 
+}
+
+.tab-content .tab-pannel{
+	float: left;
+} 
+
+.tab-content .tab-pannel img{
+	width: 1349px;height:540px;
 }
 
 .kc-menubar{

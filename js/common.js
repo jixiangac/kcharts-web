@@ -169,7 +169,7 @@ function getStyleMove(obj,name)
 	}
 }
 
-function bufferMove(obj,json,fnEnd,level)
+function startMove(obj,json,fnEnd,level)
 {
 	if(!level)level=8;
 	clearInterval(obj.timer);
