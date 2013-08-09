@@ -17,19 +17,40 @@
 
   
 
-  KISSY.use('gallery/slide/1.1/',function(S,Slide){
-    var s = new Slide('JSlide',{
-      triggerSelector:'li',//触碰节点为a
-      eventType:'click',//点击触碰点切换
-      autoSlide:true,
-        effect:'hSlide', //垂直切换
-        timeout:4000,
-        speed:700,
-        selectedClass:'current'
-    });
+  // KISSY.use('gallery/slide/1.1/',function(S,Slide){
+  //   var s = new Slide('JSlide',{
+  //     triggerSelector:'li',//触碰节点为a
+  //     eventType:'click',//点击触碰点切换
+  //     autoSlide:true,
+  //       effect:'hSlide', //垂直切换
+  //       timeout:4000,
+  //       speed:700,
+  //       selectedClass:'current'
+  //   });
+  // });
+
+  //轮播
+  (function(){
+    var aBtn=$('#JSlide li');
+    var oDiv=$('#JSlide .tab-content')
+    var aDiv=$('#JSlide .tab-pannel');
     
-   
-  });
+    var cWidth=document.documentElement.clientWidth;
+    
+    window.onload=window.onresize=function(){
+      for(var i=0;i<aDiv.length;i++){
+       
+        aDiv[i].style.width=cWidth+'px';
+      }
+    }
+    
+    for(var i=0;i<aBtn.length;i++){
+      aBtn[i].index=i;
+      aBtn[i].onmouseover=function(){
+        startMove(oDiv,{left:this.index*cWidth})
+      }
+    }
+  })();
 
 	KISSY.use("event,switchable", function(S, Event,Switchable) {
     var Carousel = Switchable.Carousel;

@@ -77,24 +77,27 @@
 	text-indent: -9999px;
 	overflow: hidden;
 }
+
+.tab-nav li.selected{
+	background: url('http://img04.taobaocdn.com/tps/i4/T1dAmVXx4cXXXjO9De-40-18.png') no-repeat 2px 0px;
+}
+
 .tab-nav li.current{
 	background: url('http://img04.taobaocdn.com/tps/i4/T1dAmVXx4cXXXjO9De-40-18.png') no-repeat 2px 0px;
 }
-.kc-banner{
-	margin:0px auto;
+
+.slide-style{
 	position: relative;
-	z-index: -2;
+
 	height:540px;
 }
+
 .tab-content{
 	height:540px;
 	overflow: hidden;
-	position: relative;
-}
-.kc-banner img{
-	width:100%;
-	display: block;
-	height: 540px;
+	position: absolute;
+	left: 0; top: 0;
+
 }
 
 .kc-menubar{
