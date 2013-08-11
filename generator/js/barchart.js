@@ -1,78 +1,74 @@
-KISSY.add(function(S, LineChart) {
+KISSY.add(function(S,BarChart) {
 	var $ = S.all,
 		Evt = S.Event,
 		IO = S.io;
 	//产生配置
-
 	function genConfig() {
-		try {
-			var defaultCfg = {
-				renderTo: "#demo1",
-				anim: {},
-				title:{
+
+		var defaultCfg = {
+			renderTo: "#demo1",
+			anim: {},
+			yAxis: {
+				min:0,
+				num:8
+			},
+			title:{
 					content:['Untitled']
 				},
 				subTitle:{
 					content:['untitled']
 				},
-				defineKey: {
-					x: "week",
-					y: "y"
-				},
-				yAxis: {
-				min:0,
-				num:8
+			defineKey: {
+				x: "week",
+				y: "y"
 			},
-				tip: {
-					template: "总支出：<span>{{y}}</span> 元<br/>",
-					css: {
-						"border-color": "{COLOR}"
-					}
-				},
+			tip: {
+				template: "总支出：<span>{{y}}</span> 元<br/>",
+				css: {
+					"border-color": "{COLOR}"
+				}
+			},
 				legend:{
 					isShow:true
 				}
-			};
+		};
 
-			var config = {};
+		var config = {};
 
-			$(".ks-chart-gen-attrs").each(function() {
-				var attrName = this.attr("attrname"),
-					subAttrName = this.attr("subattrname"),
-					subAttrVal = (function(el) {
-						if (el.attr("type") == "checkbox") {
-							return el.attr("checked") ? true : false;
-						} else {
-							return el.val();
-						}
-					})(this),
-					attrType = this.attr("attrtype");
-
-				if (attrName && (subAttrVal || false === subAttrVal)) {
-					if (!config[attrName]) {
-						config[attrName] = {};
-					}
-
-					if (attrType && !config[attrName][attrType]) {
-						config[attrName][attrType] = {};
-					}
-
-					if (subAttrName) {
-						if (attrType) {
-							config[attrName][attrType][subAttrName] = subAttrVal;
-						} else {
-							config[attrName][subAttrName] = subAttrVal;
-						}
+		$(".ks-chart-gen-attrs").each(function() {
+			var attrName = this.attr("attrname"),
+				subAttrName = this.attr("subattrname"),
+				subAttrVal = (function(el) {
+					if (el.attr("type") == "checkbox") {
+						return el.attr("checked") ? true : false;
 					} else {
-						config[attrName] = subAttrVal;
+						return el.val();
 					}
+				})(this),
+				attrType = this.attr("attrtype");
 
+			if (attrName && (subAttrVal || false === subAttrVal)) {
+				if (!config[attrName]) {
+					config[attrName] = {};
 				}
-			})
-			return S.mix(defaultCfg, config, undefined, undefined, true);
-		} catch (e) {
-			alert("配置项有误，请检查");
-		}
+
+				if (attrType && !config[attrName][attrType]) {
+					config[attrName][attrType] = {};
+				}
+
+				if (subAttrName) {
+					if (attrType) {
+						config[attrName][attrType][subAttrName] = subAttrVal;
+					} else {
+						config[attrName][subAttrName] = subAttrVal;
+					}
+				} else {
+					config[attrName] = subAttrVal;
+				}
+
+			}
+		})
+		return S.mix(defaultCfg, config, undefined, undefined, true);
 	}
 
 	//获取数据
@@ -187,6 +183,7 @@ KISSY.add(function(S, LineChart) {
 		};
 	}
 
+
 	var JsonUti = {
 		//定义换行符
 		n: "\n",
@@ -226,7 +223,7 @@ KISSY.add(function(S, LineChart) {
 				var paddingTab = JsonUti.__repeatStr(JsonUti.t, level);
 				temp.push(paddingTab);
 				//写出属性名
-				temp.push("\"" + name + "\" : ");
+				temp.push(name + " : ");
 
 				var val = obj[name];
 				if (val == null) {
@@ -285,9 +282,7 @@ KISSY.add(function(S, LineChart) {
 		}
 	};
 
-
 	$("#J_btnGen").on("click", function() {
-
 		var config = genConfig(),
 			seriesData,
 			xaxisData;
@@ -295,7 +290,7 @@ KISSY.add(function(S, LineChart) {
 		seriesData = formatData($("#J_series").val());
 		xaxisData = {xAxis:{text:seriesData.axis}};
 		var cfg = S.mix(S.mix(config, seriesData), xaxisData);
-		var linechart = new LineChart(cfg);
+		var barchart = new BarChart(cfg);
 
 		$("#J_codePane").val(JsonUti.convertToString(cfg));
 
@@ -305,7 +300,5 @@ KISSY.add(function(S, LineChart) {
 
 
 }, {
-	requires: [
-		'gallery/kcharts/1.2/linechart/', 'gallery/colorPicker/1.0/', 'gallery/colorPicker/1.0/index.css'
-	]
+	requires: ['gallery/kcharts/1.2/barchart/']
 });

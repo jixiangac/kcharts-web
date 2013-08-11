@@ -502,3 +502,8 @@
     clear:both;
     visibility:hidden;
 }
+.gen-inframe{
+	width:100%;
+	border: none;
+	height: 800px;
+}
