@@ -35,7 +35,7 @@
     var aBtn=$('#JSlide li');
     var oDiv=$('#JSlide .tab-content')[0];
     var aDiv=$('#JSlide .tab-pannel');
-    var cWidth=document.documentElement.clientWidth;
+    var cWidth=aDiv[0].offsetWidth;
     var now=0;
     for(var i=0;i<aBtn.length;i++){
       aBtn[i].index=i;
@@ -44,6 +44,7 @@
         tab();
       }
     }
+
     function tab(){
       for(var i=0;i<aBtn.length;i++){
         aBtn[i].className='';

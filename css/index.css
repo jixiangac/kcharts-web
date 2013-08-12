@@ -23,23 +23,18 @@
 	height: 40px;
 }
 .kc-header .inner .nav li{
-	display: block;
 	float: left;
-	width:82px;
-	height:40px;
-	line-height: 40px;
-	text-align: center;
-	font-size: 16px;
-	position: relative;
-	z-index: 2;
 }
 .hidden{
 	display: none;
 }
 .kc-header .inner .nav li a{
 	display: inline-block;
-	width: 82px; height: 40px;
-	color:#000;
+	height: 40px; padding:0 20px;
+	color:#000;line-height: 40px;font-size: 16px;
+	text-align: center;
+	position: relative;
+	z-index: 2;
 	text-decoration: none;
 }
 .kc-header .inner .nav li.cur{
@@ -51,7 +46,7 @@
 
 .kc-header .inner .nav li.box{
 	position:absolute;
- 	left:0px; top: 20px; 
+ 	left:0px; top: 60px; 
  	border-bottom: 3px solid #74aed2;
  	z-index:1;
 
