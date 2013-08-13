@@ -17,19 +17,57 @@
 
   
 
-  KISSY.use('gallery/slide/1.1/',function(S,Slide){
-    var s = new Slide('JSlide',{
-      triggerSelector:'li',//触碰节点为a
-      eventType:'click',//点击触碰点切换
-      autoSlide:true,
-        effect:'hSlide', //垂直切换
-        timeout:4000,
-        speed:700,
-        selectedClass:'current'
-    });
-    
-   
-  });
+  // KISSY.use('gallery/slide/1.1/',function(S,Slide){
+  //   var s = new Slide('JSlide',{
+  //     triggerSelector:'li',//触碰节点为a
+  //     eventType:'click',//点击触碰点切换
+  //     autoSlide:true,
+  //       effect:'hSlide', //垂直切换
+  //       timeout:4000,
+  //       speed:700,
+  //       selectedClass:'current'
+  //   });
+  // });
+
+  //轮播
+  (function(){
+    var oJSlide=$('#JSlide')[0];
+    var aBtn=$('#JSlide li');
+    var oDiv=$('#JSlide .tab-content')[0];
+    var aDiv=$('#JSlide .tab-pannel');
+    var cWidth=aDiv[0].offsetWidth;
+    var now=0;
+    for(var i=0;i<aBtn.length;i++){
+      aBtn[i].index=i;
+      aBtn[i].onclick=function(){
+        now=this.index;
+        tab();
+      }
+    }
+
+    function tab(){
+      for(var i=0;i<aBtn.length;i++){
+        aBtn[i].className='';
+      }
+      aBtn[now].className='selected';
+      startMove(oDiv,{left:-now*cWidth});
+    }
+
+    function toNext(){
+      now++;
+      if(now==aBtn.length)now=0;
+      tab();
+    }
+
+    var timer=setInterval(toNext,3000);
+    oJSlide.onmouseover=function(){
+      clearInterval(timer);
+    }
+
+    oJSlide.onmouseout=function(){
+      timer=setInterval(toNext,3000);
+    }
+  })();
 
 	KISSY.use("event,switchable", function(S, Event,Switchable) {
     var Carousel = Switchable.Carousel;

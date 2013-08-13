@@ -23,23 +23,18 @@
 	height: 40px;
 }
 .kc-header .inner .nav li{
-	display: block;
 	float: left;
-	width:82px;
-	height:40px;
-	line-height: 40px;
-	text-align: center;
-	font-size: 16px;
-	position: relative;
-	z-index: 2;
 }
 .hidden{
 	display: none;
 }
 .kc-header .inner .nav li a{
 	display: inline-block;
-	width: 82px; height: 40px;
-	color:#000;
+	height: 40px; padding:0 20px;
+	color:#000;line-height: 40px;font-size: 16px;
+	text-align: center;
+	position: relative;
+	z-index: 2;
 	text-decoration: none;
 }
 .kc-header .inner .nav li.cur{
@@ -51,7 +46,7 @@
 
 .kc-header .inner .nav li.box{
 	position:absolute;
- 	left:0px; top: 20px; 
+ 	left:0px; top: 60px; 
  	border-bottom: 3px solid #74aed2;
  	z-index:1;
 
@@ -76,25 +71,38 @@
 	background: url('http://img04.taobaocdn.com/tps/i4/T1dAmVXx4cXXXjO9De-40-18.png') no-repeat -19px 0px;
 	text-indent: -9999px;
 	overflow: hidden;
+	cursor: pointer;
 }
+
+.tab-nav li.selected{
+	background: url('http://img04.taobaocdn.com/tps/i4/T1dAmVXx4cXXXjO9De-40-18.png') no-repeat 2px 0px;
+}
+
 .tab-nav li.current{
 	background: url('http://img04.taobaocdn.com/tps/i4/T1dAmVXx4cXXXjO9De-40-18.png') no-repeat 2px 0px;
 }
-.kc-banner{
-	margin:0px auto;
+
+.slide-style{
 	position: relative;
-	z-index: -2;
+	overflow: hidden;
 	height:540px;
+	width: 1349px;
 }
+
 .tab-content{
 	height:540px;
-	overflow: hidden;
-	position: relative;
+	width: 4047px;
+	position: absolute;
+	left: 0px; top: 0px;
+
 }
-.kc-banner img{
-	width:100%;
-	display: block;
-	height: 540px;
+
+.tab-content .tab-pannel{
+	float: left;
+} 
+
+.tab-content .tab-pannel img{
+	width: 1349px;height:540px;
 }
 
 .kc-menubar{
