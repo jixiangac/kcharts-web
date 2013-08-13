@@ -3,7 +3,7 @@
 	var $ = S.all,Evt = S.Event;
 
 	var version = "1.1",
-		demoroot = '../gallery/kcharts/'+version+'/demo/',
+		demoroot = './demos/'+version+'/demo/',
 		chartType;
 
 	return {

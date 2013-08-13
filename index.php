@@ -60,7 +60,7 @@
 
 <div class="kc-apps-center">
 	<div class="inner">
-		<h1>已有n个项目在使用KCharts，并且在不断增加</h1>
+		<h1>最近正在使用KCharts的项目</h1>
 		<div class="wrapper">
 		<ul class="clearfix">
 			<li><img src="http://img01.taobaocdn.com/tps/i1/T1p2qoXpRaXXaZNWYj-176-80.png" alt="旺铺装修分析"/></li>
