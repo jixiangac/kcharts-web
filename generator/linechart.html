@@ -4,152 +4,118 @@
 <meta charset="utf-8"/>
 <title>在线图表生成器 KCharts 1.1 beta</title>
 <link rel="stylesheet" href="http://a.tbcdn.cn/p/global/1.0/global-min.css" />
-<link rel="stylesheet" href="css/dpl-min.css" />
-<link rel="stylesheet" href="css/bui-min.css" />
 <link rel="stylesheet" href="css/common.css" />
 </head>
 <body>
-<div class="main-container clearfix">
-<div class="nav">
-	<ul class='button-tabs'>
-		<li class="active"><a href="linechart.html">linechart</a></li>
-		<li><a href="barchart.html">barchart</a></li>
-		<li><a href="piechart.html">piechart</a></li>
-		<li><a href="datetime.html">datetime</a></li>
-		<li><a href="scatterchart.html">scatterchart</a></li>
-	</ul>
-</div>
-
-<div class="panel">
-	<div class="panel-header">
-		<h3>图表配置</h3>
+<div class="clearfix main-container">
+	<div class="preview-pane">
+		<div class="preview-inner bd-outer">
+			<div id="demo1" class="preview bd-inner"></div>
+		</div>
+		<div class="bd-outer">
+			<div class="bd-inner code-inner">
+				<div class="kc-title">
+					配置代码
+				</div>
+				<textarea id="J_codePane"  class="preview"></textarea>
+			</div>
+		</div>
 	</div>
-	<div>
-<div class="config-panel">
-<table>
-	<tr>
-		<td class="attr-name" colspan="2">线图类型(lineType)</td>
-	</tr>
-	<tr>
-		<td colspan="2">
-			<select class="ks-chart-gen-attrs" attrname="lineType">
-				<option value="straight">折线图</option>
-				<option value="arc">弧线图</option>
-			</select>
-		</td>
-	</tr>
+<!-- 更多配置 start -->
+	<div id="J_MoreCfgPanel" class="config-panel bd-outer more-config-panel">
+		<div class="bd-inner">
+			<div class="kc-title">
+				更多配置
+			</div>
+			<div class="attr-name attr-name-highlight">提示框(tip)
+					<input type="checkbox" class="ks-chart-gen-attrs" attrname="tip" subattrname="isShow" checked="checked">
+				</div>
+			<div class="attr-detail block">
+					<label class="sub-attr-name">内容模版(tpl)</label>
+						<input type="text"  class="ks-chart-gen-attrs" attrname="tip" subattrname="template" value="${{y}}">
+						<input type="text" id="J_tip_color"  class="ks-chart-gen-attrs iColorPicker" attrname="tip" attrtype="css" subattrname="color" value="#444">
+						<select class="ks-chart-gen-attrs" attrname="tip" attrtype="css" subattrname="font-weight">
+							<option value="normal">正常</option>
+							<option value="bold">加粗</option>
+						</select>
+						多数据共用tip(comparable)： <span class="label label-important">多组数据时可选</span>
+				</div>
+		</div>
+	</div>
+<!-- 更多配置 end -->
+	<div class="config-panel bd-outer">
+		<div class="bd-inner">
+			<div class="kc-title">
+				调整样式
+			</div>
+			<div>
+				<div class="attr-name attr-name-highlight">皮肤(themeCls)</div>
+				<div class="attr-detail block">
+					<select class="ks-chart-gen-attrs" attrname="themeCls">
+							<option value="ks-chart-default">default</option>
+							<option value="ks-chart-analytiks">analytiks</option>
+							<option value="ks-chart-rainbow">rainbow</option>
+						</select>
+				</div>
+				<div class="attr-name">标题(title) 
+					<input type="checkbox" class="ks-chart-gen-attrs" attrname="title" subattrname="isShow" checked="checked">
+				</div>
+				<div class="attr-detail">
+					<input type="text" class="ks-chart-gen-attrs" attrname="title" subattrname="content" placeholder="请输入标题">
+					<input type="text" id="J_title_color" class="ks-chart-gen-attrs iColorPicker" attrname="title" attrtype="css" subattrname="color">
+				</div>
+				<div class="attr-name">子标题(subTitle)
+					<input type="checkbox" class="ks-chart-gen-attrs" attrname="subTitle" subattrname="isShow" checked="checked">
+				</div>
+				<div class="attr-detail">
+					<input type="text" class="ks-chart-gen-attrs" attrname="subTitle" subattrname="content" placeholder="请输入子标题">
+						<input type="text" id="J_subtitle_color"  class="ks-chart-gen-attrs iColorPicker" attrname="subTitle" attrtype="css" subattrname="color">
+				</div>
+				<div class="attr-name">线类型(lineType)</div>
+				<div class="attr-detail">
+					<select class="ks-chart-gen-attrs" attrname="lineType">
+						<option value="straight">折线图</option>
+						<option value="arc">弧线图</option>
+					</select>
+				</div>
 
-
-	<tr>
-		<td class="attr-name" colspan="2">皮肤(themeCls)</td>
-	</tr>
-	<tr>
-		<td colspan="2">
-			<select class="ks-chart-gen-attrs" attrname="themeCls">
-				<option value="ks-chart-default">default</option>
-				<option value="ks-chart-analytiks">analytiks</option>
-				<option value="ks-chart-rainbow">rainbow</option>
-			</select>
-		</td>
-	</tr>
-	
-	<tr>
-		<td class="attr-name" colspan="2">标题:<input type="checkbox" class="ks-chart-gen-attrs" attrname="title" subattrname="isShow" checked="checked"></td>
-	</tr>
-	<tr>
-		<td colspan="2">
-			<input type="text" class="ks-chart-gen-attrs" attrname="title" subattrname="content" placeholder="请输入标题">
-			<input type="text" id="J_title_color" class="ks-chart-gen-attrs iColorPicker" attrname="title" attrtype="css" subattrname="color">
-		</td>
-	</tr>
-	<tr>
-		<td class="attr-name" colspan="2">子标题:
-			<input type="checkbox" class="ks-chart-gen-attrs" attrname="subTitle" subattrname="isShow" checked="checked"></td>
-	</tr>
-	<tr>
-		<td colspan='2'>
-			<input type="text" class="ks-chart-gen-attrs" attrname="subTitle" subattrname="content" placeholder="请输入子标题">
-			<input type="text" id="J_subtitle_color"  class="ks-chart-gen-attrs iColorPicker" attrname="subTitle" attrtype="css" subattrname="color">
-		</td>
-	</tr>
-	<tr>
-		<td colspan="2"><textarea id="J_series" class="ks-chart-gen-attrs large-area" attrname="series">
+				<div class="attr-name">纵轴网格线(xGrids)
+					<input type="checkbox" class="ks-chart-gen-attrs" attrname="xGrids" subattrname="isShow" checked="checked">
+				</div>
+				<div class="attr-name">横轴网格线(yGrids)
+					<input type="checkbox" class="ks-chart-gen-attrs" attrname="yGrids" subattrname="isShow" checked="checked">
+				</div>
+				
+				
+				<div class="attr-name">数据</div>
+				<div class="attr-detail block ">
+					<div class="scroll-x">
+					<textarea id="J_series" class="ks-chart-gen-attrs large-area" attrname="series">
              Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec
  Tokyo 7.0 6.9 9.5 14.5 18.2 21.5 25.2 26.5 23.3 18.3 13.9 9.6
  NewYork -0.2 0.8 5.7 11.3 17.0 22.0 24.8 24.1 20.1 14.1 8.6 2.5
  Berlin -0.9 0.6 3.5 8.4 13.5 17.0 18.6 17.9 14.3 9.0 3.9 1.0
  London 3.9 4.2 5.7 8.5 11.9 15.2 17.0 16.6 14.2 10.3 6.6 4.8
-		</textarea></td>
-	</tr>
-	<tr>
-		<td class="attr-name" colspan="2">提示：<input type="checkbox" class="ks-chart-gen-attrs" attrname="tip" subattrname="isShow" checked="checked"></td>
-	</tr>
-	<tr>
-		<td colspan="2">
-			<label class="sub-attr-name">内容模版:</label>
-			<input type="text"  class="ks-chart-gen-attrs" attrname="tip" subattrname="template" value="总共支出：{{y}}元">
-			<input type="text" id="J_tip_color"  class="ks-chart-gen-attrs iColorPicker" attrname="tip" attrtype="css" subattrname="color" value="#444">
-			<select class="ks-chart-gen-attrs" attrname="tip" attrtype="css" subattrname="font-weight">
-				<option value="normal">正常</option>
-				<option value="bold">加粗</option>
-			</select>
-		</td>
-	</tr>
-	<tr>
-		<td class="sub-attr-name" colspan="2">多数据共用tip(comparable)：<input type="checkbox" class="ks-chart-gen-attrs" attrname="comparable"> <span class="label label-important">多组数据时可选</span></td>
-	</tr>
+					</textarea>
+					</div>
+				</div>
 
-	<tr>
-		<td class="attr-name" colspan="2">纵向网格线(xGrids)：<input type="checkbox" class="ks-chart-gen-attrs" attrname="xGrids" subattrname="isShow" checked="checked"></td>
-	</tr>
-
-	<tr>
-		<td class="sub-attr-name">线(border-left):</td>
-		<td><input type="text"  class="ks-chart-gen-attrs" attrname="xGrids" attrtype="css" subattrname="border-left" value="1px solid #eee"></td>
-	</tr>
-
-	<tr>
-		<td class="sub-attr-name">颜色:</td>
-		<td><input id="J_xgrids_color" type="text"  class="ks-chart-gen-attrs iColorPicker" attrname="xGrids" attrtype="css" subattrname="border-color" value="#eee"></td>
-	</tr>
-
-	<tr>
-		<td class="attr-name" colspan="2">横向网格线(yGrids)：<input type="checkbox" class="ks-chart-gen-attrs" attrname="yGrids" subattrname="isShow" checked="checked"></td>
-	</tr>
-	
-	<tr>
-		<td class="sub-attr-name">线(border-top):</td>
-		<td><input type="text"  class="ks-chart-gen-attrs" attrname="yGrids" attrtype="css" subattrname="border-top" value="1px dashed #eee"></td>
-	</tr>
-
-	<tr>
-		<td class="sub-attr-name">颜色:</td>
-		<td><input id="J_ygrids_color" type="text"  class="ks-chart-gen-attrs iColorPicker" attrname="yGrids" attrtype="css" subattrname="border-color" value="#eee"></td>
-	</tr>
-</div>
-</table>
-</div>
-</div>
-	<div class="preview-pane">
-		<div class="preview-inner">
-			<div id="demo1" class="preview"></div>
-			配置代码:
-			<!-- <div class="preview" id="J_Code"></div> -->
-			<textarea id="J_codePane"  class="preview"></textarea>
-
+				<div class="gen-wrapper">
+					<div class="btn-more-config-wrapper">
+						<a href="#" id="J_MoreConfig" class="btn-more-config">更多配置</a>
+					</div>
+					<a href="javascript:void(0)" id="J_btnGen" class="kc-btn kc-btn-blue">生成</a>
+					<a class="kc-btn" href="http://fiddle.jshell.net/huxiaoqi/3Y2Gc/" target="_blank">edit in fiddle</a>
+				</div>
 			</div>
 		</div>
 	</div>
-</div>
-</div>
-<div class="btn-pane">
-	<button id="J_btnGen" class="button button-danger">generate</button>
-	<a class="button button-success" href="http://fiddle.jshell.net/huxiaoqi/3Y2Gc/" target="_blank">edit in fiddle</a>
 </div>
 <script src="http://a.tbcdn.cn/??s/kissy/1.3.0/kissy-min.js"></script>
 <script type="text/javascript" src="js/jquery-min.js"></script>
 <script type="text/javascript" src="js/icolor-picker-min.js"></script>
 <script type="text/javascript" src="js/highlighter.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
 <script type="text/javascript">
 (function(S){
 	S.Config.debug = true;

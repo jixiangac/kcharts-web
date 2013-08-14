@@ -1,94 +1,38 @@
-.main-container{
-	padding-bottom: 80px;
-}
-.config-panel{
-	width:40%;
-	overflow: hidden;
-	float: left;
-	padding: 4px;
-}
-.config-panel table{
-	table-layout: fixed;
-	width:100%;
-	border:1px solid #ddd;
-}
-.config-panel td{
-	white-space: nowrap;
-	padding: 2px;
-}
-.config-panel .attr-name{
-	font-weight: bolder;
-	line-height: 16px;
-	background: #eee;
-	border:1px solid #ddd;
-	padding: 2px;
-}
-.config-panel .sub-attr-name{
-	/*text-align: right;*/
-}
-.config-panel .large-area{
-	width:98%;
-	margin:0px auto;
-	height:200px;
-}
-.preview-pane{
-	float: right;
-	width:56%;
-}
-.preview-pane .preview-inner{
-	padding: 4px;
-}
-.preview{
-	width:100%;
-	height:300px;
-	border:1px solid #ccc;
-	display: block;
-}
-.btn-pane{
-	text-align: center;
-	position: fixed;
-	width:100%;
-	height: 40px;
-	bottom: 0px;
-	z-index: 100;
-	background: #fff;
-	border-top: 1px solid #ccc;
-}
-#J_btnGen{
-	font-size: 14px;
-	height:30px;
-	width:100px;
-	margin-top:5px;
-}
-.warn{
-	font-size: 12px;
-	color:red;
-	font-weight: normal;
-}
-.banner{
-	font-size: 20px;
-	font-family: Microsoft Yahei;
-	color:#444;
-}
-
-.split{
-	background: #f7f7f7;
-	color:#444;
-}
-.clearfix:after {
-      visibility: hidden;
-      display: block;
-      font-size: 0;
-      content: " ";
-      clear: both;
-      height: 0;
-}
-.clearfix{
-      *zoom:1;
-}
-.main-container .iColorPicker{
-	width:40px;
-}
-.nav{padding:10px 3px 0px;}
-.nav li a,.nav li a:hover{color:#444;text-decoration: none;}
-.nav .active a,.nav .active a:hover{color:#fff;}
+.clearfix:after { visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0; }
+.clearfix{ *zoom:1; }
+.main-container{ width:1000px; margin:0px auto;font-family: Microsoft Yahei; }
+.config-panel{ width:264px; overflow: hidden; float: right; background: #fff}
+.config-panel table{ table-layout: fixed; width:100%; border:1px solid #ddd; }
+.config-panel td{ white-space: nowrap; padding: 2px; }
+.attr-name{  font-family: Microsoft Yahei; line-height: 34px; background: #f0f0f0; color:#444;text-indent: 10px; }
+.attr-name-highlight{color:#fff;background: #52a3cc;}
+.attr-detail{padding: 12px 10px;overflow: hidden;display: none;}
+.gen-wrapper{padding: 12px 10px;}
+.config-panel .large-area{ width:800px; margin:0px auto; height:200px; }
+.more-config-panel{position: absolute;right: -278px;}
+.hide{display: none;}
+.block{display: block;}
+.preview-pane{ float: left;}
+.preview-pane .preview-inner{margin-bottom: 20px;}
+.preview{ width:696px; height:300px;display: block; }
+/*.btn-pane{ text-align: center; position: fixed; width:100%; height: 40px; bottom: 0px; z-index: 100; background: #fff; border-top: 1px solid #ccc; }
+#J_btnGen{ font-size: 14px; height:30px; width:100px; margin-top:5px; }*/
+/*.warn{ font-size: 12px; color:red; font-weight: normal; }*/
+.banner{ font-size: 20px;color:#444; }
+.main-container .iColorPicker{ width:40px; }
+.nav{ padding:10px 3px 0px; }
+.nav li a,.nav li a:hover{ color:#444; text-decoration: none; }
+.nav .active a,.nav .active a:hover{ color:#fff; }
+.bd-outer{ border:7px solid #ebebeb; }
+.bd-inner{ border:1px solid #d3d3d3; }
+.bd-outer,.bd-inner{border-radius: 3px 3px 3px 3px;-moz-border-radius: 3px 3px 3px 3px;-webket-border-radius: 3px 3px 3px 3px;}
+.kc-title{background: url('http://img04.taobaocdn.com/tps/i4/T155qhFa8cXXc4v7s.-1-40.png') repeat-x;height: 40px;line-height: 40px;font-family: Microsoft Yahei;color:#000;font-size: 16px;text-indent: 10px;}
+select{font-size: 14px;width:230px;line-height: 30px;height: 30px;}
+.preview{border: none;}
+.kc-btn{margin: 10px auto;display: block; width: 150px;height: 38px;line-height: 38px;text-decoration: none;text-align: center;border:1px solid #ccc;color:#444;font-size: 16px;}
+.kc-btn-blue{background: #52a3cc;border-color:#3e8cb3;color:#fff;}
+.kc-btn:hover{text-decoration: none;}
+.btn-more-config-wrapper{text-align: right;padding: 15px 0px;}
+.btn-more-config{color:#52a3cc;font-size: 16px;}
+.scroll-x{overflow-x:scroll;}
+.scroll-y{overflow-y:scroll;}
