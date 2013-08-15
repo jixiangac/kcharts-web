@@ -19,6 +19,7 @@ KISSY.add(function(S, DateTime) {
 					x: "week",
 					y: "y"
 				},
+				xLabels:{},
 				yAxis: {
 				min:0,
 				num:8
@@ -291,19 +292,17 @@ KISSY.add(function(S, DateTime) {
 		var config = genConfig(),
 			seriesData,
 			xaxisData;
-
+		//单独处理横轴间隔输出问题
+		config.xLabels.template = function(index,txt){
+			return index % (config.xLabels.step||1) == 0 ? txt : "";
+		}
 		seriesData = formatData($("#J_series").val());
 		xaxisData = {xAxis:{text:seriesData.axis}};
 		var cfg = S.mix(S.mix(config, seriesData), xaxisData);
 		var datetime = new DateTime(cfg);
-
 		$("#J_codePane").val(JsonUti.convertToString(cfg));
-
 	});
-
 	$("#J_btnGen").fire("click");
-
-
 }, {
 	requires: [
 		'gallery/kcharts/1.2/datetime/', 'gallery/colorPicker/1.0/', 'gallery/colorPicker/1.0/index.css'

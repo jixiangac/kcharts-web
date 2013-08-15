@@ -14,7 +14,7 @@ border-right: 1px solid #fff;
 .config-panel table{ table-layout: fixed; width:100%; }
 .config-panel td{ white-space: nowrap; padding: 2px; }
 .config-panel-inner{height: 673px;overflow: hidden;}
-.sub-attr-name{width: 50px;}
+.sub-attr-name{width: 60px;}
 .attr-name{ position: relative; font-family: Microsoft Yahei; line-height: 34px; background: #f0f0f0; color:#444;text-indent: 10px; border-bottom: 1px solid #fff;}
 .attr-name:hover{background: #dbdbdb;}
 .attr-name-highlight{color:#fff;background: #52a3cc;}

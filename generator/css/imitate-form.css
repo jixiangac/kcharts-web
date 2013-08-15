@@ -95,8 +95,6 @@
   background:#f7f7f7;
 }
 
-
-
 .group-input-text .hover{
   border-color:#cae8fb;
 }
@@ -104,3 +102,5 @@
 .group-select-short{width: 120px;}
 .group-select-short .select-list{width: 134px;}
 
+.group-input-text-short{width: 132px;}
+.group-input-text-short input[type="text"]{width: 112px;}

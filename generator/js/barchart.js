@@ -18,10 +18,7 @@ KISSY.add(function(S,BarChart) {
 				subTitle:{
 					content:['untitled']
 				},
-			defineKey: {
-				x: "week",
-				y: "y"
-			},
+			xAxis:{},
 			tip: {
 				template: "总支出：<span>{{y}}</span> 元<br/>",
 				css: {
@@ -287,9 +284,10 @@ KISSY.add(function(S,BarChart) {
 			seriesData,
 			xaxisData;
 
-		seriesData = formatData($("#J_series").val());
-		xaxisData = {xAxis:{text:seriesData.axis}};
+		seriesData =formatData($("#J_series").val());
+		xaxisData =config.zoomType == "y" ?{yAxis:{text:seriesData.axis}} : {xAxis:{text:seriesData.axis}};
 		var cfg = S.mix(S.mix(config, seriesData), xaxisData);
+		S.log(cfg)
 		var barchart = new BarChart(cfg);
 
 		$("#J_codePane").val(JsonUti.convertToString(cfg));

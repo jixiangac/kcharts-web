@@ -4,6 +4,7 @@ KISSY.use("overlay",function(S,Overlay){
 		var	$tgt =$(e.currentTarget),$attrDetail = $tgt.next(".attr-detail");
 		$tgt.all(".triangle").toggleClass("up")
 		//$attrDetail.slideDown(0.2).siblings(".attr-detail").slideUp(0.1);
+		if(!$attrDetail) return;
 		if($attrDetail.hasClass("isdown")){
 			$attrDetail.slideUp(0.2).removeClass("isdown");
 		}else{
@@ -13,10 +14,17 @@ KISSY.use("overlay",function(S,Overlay){
 	});
 	$("#J_MoreConfig").on("click",function(e){
 		e.preventDefault();
-		var $J_Scroll = $(".scroll-wrapper");
-		var h = $J_Scroll.outerHeight();
-		$("#J_MoreCfgPanel").show();
-		S.one(".scroll-wrapper").animate({scrollTop:h+30},1,'easeOut')
+		if(!$(e.target).hasClass("isshow")){
+			var $J_Scroll = $(".scroll-wrapper");
+			var h = $J_Scroll.outerHeight();
+			$("#J_MoreCfgPanel").show();
+			S.one(".scroll-wrapper").animate({scrollTop:h+30},1,'easeOut')
+			$(e.target).addClass("isshow").html("收起更多配置");
+		}else{
+			$("#J_MoreCfgPanel").hide();
+			$(e.target).removeClass("isshow").html("展开更多配置");
+		}
+		
 	})
 
 
