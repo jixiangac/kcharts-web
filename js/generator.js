@@ -1,8 +1,9 @@
 (function(S){
 	var $ = S.all;
+	var $J_SelContent = $("#J_SelContent");
 	$("#J_SelType").on("click",function(e){
 		e.preventDefault();
-		var $J_SelContent = $("#J_SelContent");
+		
 		if(!$J_SelContent.hasClass("isdown")){
 			// $J_SelContent.addClass("isdown").stop().animate({height:"114px"},1,function(){});
 			$J_SelContent.addClass("isdown").show().fadeIn();
@@ -16,5 +17,6 @@
 		$("a",$(e.currentTarget)).addClass("cur")
 		$(e.currentTarget).siblings().all("a").removeClass("cur");
 		$("#J_TxtType").text($(e.currentTarget).attr("data-type"));
+		$J_SelContent.removeClass("isdown").hide().fadeOut();
 	})
 })(KISSY);

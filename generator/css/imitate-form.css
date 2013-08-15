@@ -17,6 +17,7 @@
   padding:3px 10px;
 }
 
+.group-checkbox {display: inline-block;}
 .group-radio .radio,
 .group-checkbox .checkbox{
   display:inline-block;
@@ -57,6 +58,8 @@
   background: linear-gradient(to bottom,  #ffffff 0%,#eeeeee 100%); /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#eeeeee',GradientType=0 ); /* IE6-9 */
 }
+
+.group-select.level{z-index: 1;}
 .group-select .triangle{
   position:absolute;
   right:11px;
@@ -64,14 +67,21 @@
   border:5px solid #586c7c;
   border-color:#586c7c transparent transparent transparent;
 }
+.group-select .triangle.up{
+  border-color:transparent transparent #586c7c transparent;
+  top:7px;
+}
+
 .group-select .select-list{
   position:absolute;
+  z-index: 2;
   left:-1px;
   top:32px;
   border:1px solid #dddddd;
   border-top:0;
   border-bottom:0;
   width:227px;
+  display:none;
 }
 .group-select .select-list li{
   height:33px;
@@ -79,6 +89,10 @@
   overflow:hidden;
   border-bottom:1px solid #dddddd;
   padding:0 14px;
+  background: #fff;
+}
+.group-select .select-list li:hover{
+  background:#f7f7f7;
 }
 
 
@@ -86,4 +100,7 @@
 .group-input-text .hover{
   border-color:#cae8fb;
 }
+
+.group-select-short{width: 120px;}
+.group-select-short .select-list{width: 134px;}
 
