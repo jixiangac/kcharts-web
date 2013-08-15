@@ -14,16 +14,17 @@
 .bd-outer{border:7px solid #ebebeb;}
 .bd-inner{border:1px solid #d3d3d3;}
 .bd-outer,.bd-inner{border-radius: 3px 3px 3px 3px;-moz-border-radius: 3px 3px 3px 3px;-webket-border-radius: 3px 3px 3px 3px;}
+
 .icon-linechart a{background: url('http://img01.taobaocdn.com/tps/i1/T1iVSfFb8dXXbOZtQq-955-236.png') no-repeat 0px 0px;}
-.icon-linechart:hover,.icon-linechart .cur{background-position: 0px -156px;}
+.icon-linechart:hover,.icon-linechart .cur{background: url('http://img01.taobaocdn.com/tps/i1/T1iVSfFb8dXXbOZtQq-955-236.png') no-repeat  0px -156px;}
 .icon-barchart{background: url('http://img01.taobaocdn.com/tps/i1/T1iVSfFb8dXXbOZtQq-955-236.png') no-repeat -88px 0px;}
-.icon-barchart:hover,.icon-barchart .cur{background-position: -88px -156px;}
+.icon-barchart:hover,.icon-barchart .cur{background: url('http://img01.taobaocdn.com/tps/i1/T1iVSfFb8dXXbOZtQq-955-236.png') no-repeat -88px -156px;}
 .icon-barchart-stack{background: url('http://img01.taobaocdn.com/tps/i1/T1iVSfFb8dXXbOZtQq-955-236.png') no-repeat -175px 0px;}
-.icon-barchart-stack:hover,.icon-barchart-stack .cur{background-position: -175px -156px;}
+.icon-barchart-stack:hover,.icon-barchart-stack .cur{background: url('http://img01.taobaocdn.com/tps/i1/T1iVSfFb8dXXbOZtQq-955-236.png') no-repeat -175px -156px;}
 .icon-piechart{background: url('http://img01.taobaocdn.com/tps/i1/T1iVSfFb8dXXbOZtQq-955-236.png') no-repeat -263px 0px;}
-.icon-piechart:hover,.icon-piechart .cur{background-position: -263px -156px;}
+.icon-piechart:hover,.icon-piechart .cur{background: url('http://img01.taobaocdn.com/tps/i1/T1iVSfFb8dXXbOZtQq-955-236.png') no-repeat  -263px -156px;}
 .icon-scatterchart{background: url('http://img01.taobaocdn.com/tps/i1/T1iVSfFb8dXXbOZtQq-955-236.png') no-repeat -524px 0px;}
-.icon-scatterchart:hover,.icon-scatterchart .cur{background-position: -524px -156px;}
+.icon-scatterchart:hover,.icon-scatterchart .cur{background: url('http://img01.taobaocdn.com/tps/i1/T1iVSfFb8dXXbOZtQq-955-236.png') no-repeat  -524px -156px;}
 .sel-container{padding-bottom: 90px;}
 </style>
 <div class="main-container">
@@ -37,11 +38,11 @@
 		<div class="sel-content bd-outer" id="J_SelContent">
 			<div class="bd-inner sel-content-inner">
 				<ul class="clearfix">
-					<li class="icon-linechart" data-type="折线图"><a class="cur" href="generator/linechart.html" target="J_Frame"></a></li>
-					<li class="icon-barchart" data-type="柱状图"><a href="generator/barchart.html" target="J_Frame"></a></li>
-					<li class="icon-barchart-stack" data-type="横向柱状图"><a href="generator/barchart-stack.html" target="J_Frame"></a></li>
-					<li class="icon-piechart" data-type="饼图"><a href="generator/piechart.html" target="J_Frame"></a></li>
-					<li class="icon-scatterchart" data-type="散点图"><a href="generator/scatterchart.html" target="J_Frame"></a></li>
+					<li class="icon-chart icon-linechart" data-type="折线图"><a class="cur" href="generator/linechart.html" target="J_Frame"></a></li>
+					<li class="icon-chart icon-barchart" data-type="柱状图"><a href="generator/barchart.html" target="J_Frame"></a></li>
+					<li class="icon-chart icon-barchart-stack" data-type="横向柱状图"><a href="generator/barchart-stack.html" target="J_Frame"></a></li>
+					<li class="icon-chart icon-piechart" data-type="饼图"><a href="generator/piechart.html" target="J_Frame"></a></li>
+					<li class="icon-chart icon-scatterchart" data-type="散点图"><a href="generator/scatterchart.html" target="J_Frame"></a></li>
 				</ul>
 			</div>
 		</div>

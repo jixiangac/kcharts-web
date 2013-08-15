@@ -192,7 +192,7 @@
 	padding-bottom: 10px;
 	padding-left: 40px;
 }
-.bd-outer{border:7px solid #ebebeb;}
+.bd-outer{border:5px solid #ebebeb;}
 .bd-inner{border:1px solid #d3d3d3;}
 .bd-outer,.bd-inner{border-radius: 3px 3px 3px 3px;-moz-border-radius: 3px 3px 3px 3px;-webket-border-radius: 3px 3px 3px 3px;}
 .kc-main-content .inner .preview-bd{
@@ -234,6 +234,7 @@
 	height:130px;
 	display: block;
 }
+
 .kc-main-content .inner .chart-list .ks-switchable-content .linechart a{
 	background: url('http://img03.taobaocdn.com/tps/i3/T1bGmkXphhXXckL6Z0-130-130.png') no-repeat;
 }

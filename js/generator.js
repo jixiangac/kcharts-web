@@ -14,6 +14,7 @@
 
 	$("li",$("#J_SelContent")).on("click",function(e){
 		$("a",$(e.currentTarget)).addClass("cur")
+		$(e.currentTarget).siblings().all("a").removeClass("cur");
 		$("#J_TxtType").text($(e.currentTarget).attr("data-type"));
 	})
 })(KISSY);
