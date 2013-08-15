@@ -1,18 +1,22 @@
 .kc-lib{
-	
+	padding-top: 48px;
+	background: url('http://img03.taobaocdn.com/tps/i3/T1YXWgFcVbXXcCXlfb-25-25.png') repeat;
 }
 .kc-lib .inner{
 	width:1000px;
-	margin:48px auto;
+	margin:0px auto;
+	padding-bottom: 80px;
 }
 .kc-lib .inner .siderbar{
-	width:236px;
-	border:1px solid #ccc;
+	width:208px;
 	float: left;
+	overflow: hidden;
+	background: #d3d3d3;
 }
 .kc-lib .inner .siderbar li{
+	background: #fff;
 	display: block;
-	width:236px;
+	width:206px;
 	height:42px;
 	line-height: 42px;
 	text-indent: 20px;
@@ -21,12 +25,13 @@
 	border-bottom:1px solid #ccc;
 }
 .kc-lib .inner .siderbar .banner{
-	height:100px;
-	line-height: 100px;
-	font-size: 30px;
-	color:#666;
-	text-indent: -30px;
+	height:49px;
+	line-height: 49px;
+	font-size: 24px;
+	color:#75b5d6;
+	text-indent: 0px;
 	text-align: center;
+	background: url('http://img02.taobaocdn.com/tps/i2/T14OihFehaXXcwPQA.-1-49.png') repeat-x;
 }
 .kc-lib .inner .siderbar li a{
 	color:#666;
@@ -43,14 +48,12 @@
 }
 .kc-lib .inner .siderbar li a:hover,.kc-lib .inner .siderbar li.cur a{
 	font-weight: bold;
-	background: #eee
+	background: #75b5d6;
+	color:#fff;
 }
 .kc-lib .inner .siderbar li a.linechart i{
 	background: url('http://img01.taobaocdn.com/tps/i1/T1SpiHXxVgXXXGMTY8-202-318.png') no-repeat  4px -113px;
 }
-/*.kc-lib .inner .siderbar li a.linechart:hover i,.kc-lib .inner .siderbar li.cur a.linechart i{
-	background: url('http://img01.taobaocdn.com/tps/i1/T1SpiHXxVgXXXGMTY8-202-318.png') no-repeat  -60px -113px;
-}*/
 .kc-lib .inner .siderbar li a.barchart i{
 	background: url('http://img01.taobaocdn.com/tps/i1/T1SpiHXxVgXXXGMTY8-202-318.png') no-repeat  0px 3px;
 }
@@ -73,43 +76,37 @@
 	background:url('http://img01.taobaocdn.com/tps/i1/T1SpiHXxVgXXXGMTY8-202-318.png') no-repeat   -54px -177px;
 }
 .kc-lib .inner .sidercontent{
-	width:750px;
 	float: right;
 }
 .kc-lib .inner .btn-container{
 	float: left;
 }
-.kc-lib .inner .btn-container .btn-gen{
+.kc-lib .inner .btn-container .btn,.kc-lib .inner .btn-container .btn-blue{
 	display: block;
-	width:231px;
-	height:41px;
-	line-height: 41px;
+	width:151px;
+	height:38px;
+	line-height: 38px;
 	text-align: center;
 	font-family: Microsoft Yahei;
-	color:#fff;
+	color:#000;
+	background: #fff;
 	float: left;
 	font-size: 14px;
 	margin:32px 0px 0px 0px;
-	background: url('http://img02.taobaocdn.com/tps/i2/T122OSXCheXXcLhOvo-231-41.png') no-repeat;
+	border:1px solid #aaa;
+	border-radius: 2px 2px 2px 2px;
+	-moz-border-radius: 2px 2px 2px 2px;
+	-webket-border-radius: 2px 2px 2px 2px;
 }
-.kc-lib .inner .btn-container .btn-doc{
-	display: block;
-	font-size: 14px;
-	width:236px;
-	height:42px;
-	line-height: 42px;
-	text-align: center;
-	font-family: Microsoft Yahei;
-	color:#444;
-	float: right;
-	margin:32px 0px 0px 10px;
-	background: url('http://img02.taobaocdn.com/tps/i2/T1fhuUXDVbXXarmJ2q-236-42.png') no-repeat;
+.kc-lib .inner .btn-container .btn-blue{
+	background:#52a3cc;
+	color:#fff;
+	border:1px solid #3e8cb3;
 }
 .kc-lib .inner .demo-container{
 	width:750px;
 	border:1px solid #ccc;
 	height:330px;
-	float: right;
 	overflow: hidden;
 }
 .kc-lib .inner .demo-container .open-new{

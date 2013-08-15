@@ -7,14 +7,15 @@
 	box-shadow:0px 0px 3px #ccc; 
 	position: relative;
 	z-index: 99;
-	background: #fff;
+	background: url('http://img03.taobaocdn.com/tps/i3/T1YXWgFcVbXXcCXlfb-25-25.png') repeat;
 	width:100%;
 }
+
 .kc-header .inner{
 	width:1000px;
 	height:78px;
 	margin:0px auto;
-	background: url('http://img02.taobaocdn.com/tps/i2/T1TQygXEteXXXr6JI6-109-50.png') no-repeat 0px 13px;
+	background: url('http://img01.taobaocdn.com/tps/i1/T1np1gFktbXXXr6JI6-109-50.png') no-repeat 0px 13px;
 }
 .kc-header .inner .nav{
 	margin:0px 0px 0px 200px;
@@ -168,7 +169,8 @@
 
 
 .kc-main-content{
-
+	padding-bottom: 40px;
+	background: url('http://img03.taobaocdn.com/tps/i3/T1YXWgFcVbXXcCXlfb-25-25.png') repeat;
 }
 .kc-main-content .inner{
 	width:1000px;
@@ -190,20 +192,28 @@
 	padding-bottom: 10px;
 	padding-left: 40px;
 }
-.kc-main-content .inner .preview{
-	background: #f5f5f5;
-	margin-top: 20px;
+.bd-outer{border:5px solid #ebebeb;}
+.bd-inner{border:1px solid #d3d3d3;}
+.bd-outer,.bd-inner{border-radius: 3px 3px 3px 3px;-moz-border-radius: 3px 3px 3px 3px;-webket-border-radius: 3px 3px 3px 3px;}
+.kc-main-content .inner .preview-bd{
 	width:917px;
+	margin:20px auto 0px;
+}
+.kc-main-content .inner .preview{
+	width:915px;
 	display: block;
-	margin:0px auto;
-}.kc-main-content .inner .preview iframe{
+	border-radius: 3px 3px 3px 3px;
+	background: #fff;
+}
+.kc-main-content .inner .preview iframe{
 	border:none;
 }
 .kc-main-content .inner .chart-list{
 	height:130px;
+	width:1000px;
 	overflow: hidden;
-	padding: 0px 0px 44px 0px;
 	text-align: center;
+	margin-left: -40px;
 }
 .kc-main-content .inner .chart-list .scrollable{
 	height: 130px;
@@ -224,6 +234,7 @@
 	height:130px;
 	display: block;
 }
+
 .kc-main-content .inner .chart-list .ks-switchable-content .linechart a{
 	background: url('http://img03.taobaocdn.com/tps/i3/T1bGmkXphhXXckL6Z0-130-130.png') no-repeat;
 }
@@ -278,6 +289,7 @@
 	cursor: pointer;
 	text-indent: -9999px;
 	overflow: hidden;
+	margin-left: -7px;
 }
 .kc-main-content .inner .chart-list .prev{
 	background: url('http://img02.taobaocdn.com/tps/i2/T1Il1nXsFdXXXwQTje-40-82.png') no-repeat 0px 24px;
@@ -286,11 +298,11 @@
 	background: url('http://img03.taobaocdn.com/tps/i3/T16yClXxliXXXwQTje-40-82.png') no-repeat -3px 25px;
 }
 .kc-main-content .inner .chart-list .next{
-	margin-left: 960px;
+	margin-left: 967px;
 	background: url('http://img01.taobaocdn.com/tps/i1/T1oVGnXphgXXXwQTje-40-82.png') no-repeat 0px 24px;
 }
 .kc-main-content .inner .chart-list .next:hover{
-	margin-left: 960px;
+	margin-left: 967px;
 	background: url('http://img03.taobaocdn.com/tps/i3/T15cubXsVjXXXwQTje-40-82.png') no-repeat 0px 25px;
 }
 
@@ -319,7 +331,7 @@
 }
 
 .kc-apps-center{
-	background: #e6e6e6;
+	background: #52a3cc;
 }
 .kc-apps-center .inner{
 	width:1000px;
@@ -329,7 +341,7 @@
 	font-size: 16px;
 	line-height: 30px;
 	font-family: Microsoft Yahei;
-	color: #000;
+	color: #fff;
 	line-height: 76px;
 	text-align: center;
 }
@@ -360,10 +372,22 @@
 	height:29px;
 	overflow: hidden;
 	text-indent: -9999px;
-	background: url("http://img01.taobaocdn.com/tps/i1/T1vl09XDlhXXargrva-141-29.png") no-repeat;
+	background: url("http://img02.taobaocdn.com/tps/i2/T1H6SfFiXdXXaGK32a-142-34.png") no-repeat 0px -2px;
+	_background:none;                                                 
+	_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="http://img02.taobaocdn.com/tps/i2/T1H6SfFiXdXXaGK32a-142-34.png");
 	display: inline-block;
 	*display: inline;
 	*zoom:1;
+}
+.kc-apps-center .contect-wrapper .coperation{
+	display: inline-block;
+	*display: inline;
+	*zoom:1;
+	height: 29px;
+	color:#fff;
+	line-height: 30px;
+	vertical-align: top;
+	padding-left: 10px;
 }
 .kc-apps-center .contect-wrapper{
 	font-family: Microsoft Yahei;
@@ -373,10 +397,18 @@
 
 .kc-bottom-banner{
 	padding-bottom: 122px;
+	background: url('http://img03.taobaocdn.com/tps/i3/T1YXWgFcVbXXcCXlfb-25-25.png') repeat;
 }
 .kc-bottom-banner .inner{
 	width:1000px;
 	margin:0px auto;
+}
+.kc-bottom-banner .inner .offer{
+	height: 40px;
+	text-align: center;
+	font-size: 20px;
+	font-family: Microsoft Yahei;
+	padding: 60px 0px 26px;
 }
 .kc-bottom-banner .inner h1{
 	height: 144px;
@@ -388,10 +420,12 @@
 	text-align: center;
 }
 .kc-bottom-banner .inner .item{
-	width:499px;
-	height: 190px;
+	width:417px;
 	font-family: Microsoft Yahei;
 	font-size: 14px;
+}
+.kc-bottom-banner .inner .item .bd-inner{
+	padding-bottom: 40px;
 }
 .kc-bottom-banner .inner .item h3{
 	margin: 50px 0px 10px 0px;
@@ -406,11 +440,17 @@
 }
 .kc-bottom-banner .inner .left{
 	float:left;
-	background:#fff url('http://img04.taobaocdn.com/tps/i4/T1W0CnXyFcXXafycnp-82-92.png') no-repeat  0px center;
+	background:#fff url('http://img04.taobaocdn.com/tps/i4/T1W0CnXyFcXXafycnp-82-92.png') no-repeat  30px center;
 }
 .kc-bottom-banner .inner .right{
 	float: right;
-	background:#fff url('http://img02.taobaocdn.com/tps/i2/T1UgKmXvXfXXcQvQI8-119-92.png') no-repeat  0px center;
+	background:#fff url('http://img02.taobaocdn.com/tps/i2/T1UgKmXvXfXXcQvQI8-119-92.png') no-repeat  30px center;
+}
+.kc-bottom-banner .inner .right h3{
+	padding-left: 155px;
+}
+.kc-bottom-banner .inner .right p{
+	padding: 0px 80px 0px 156px ;
 }
 
 

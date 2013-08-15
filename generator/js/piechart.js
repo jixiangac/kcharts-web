@@ -7,23 +7,17 @@ KISSY.add(function(S,PieChart) {
 
 		var defaultCfg = {
 						 data:[
-						 {label:"Chrome", data:1},
+						 {label:"Chrome", data:'1'},
 						 { label:"FireFox", data:2 },
 						 { label:"IE", data:3 },
 						 { label:"Opera",data:4 },
 						 { label:"Safari", data:5 }],
-						 color:{
-							 initial:"#f00"
-						 },
-						 gradient:true,//开启渐变色
 						 renderTo:"#demo1",
-						 cx:350,cy:150,
-						 rs:80,
-						 interval:5,
-						 anim:{
-							 easing:'swing',
-							 duration:800
-						 }
+		      			rpadding:80,
+						anim:{
+							easing:'swing',
+							duration:800
+						}
 					 };
 
 		var config = {};
@@ -163,14 +157,45 @@ KISSY.add(function(S,PieChart) {
 		}
 	};
 
+		//支持字符串的number判断
+	function isNum(arg) {
+		if (!isNaN(arg - 0)) return true;
+		return false;
+	}
+	//格式化数据
+	function formatData(data) {
+		var data = S.trim(data).replace(/\n/g, ",").split(","),
+		series = [];
+		for(var i in data){
+			var tmp = data[i].replace(/\s+/g," ").split(" ");
+			S.log(tmp[1])
+			if(tmp.length == 1 && isNum(tmp[0])){
+				series.push({label:i,data:tmp[0] - 0});
+			}else if(tmp.length > 1){
+				if(isNum(tmp[0])){
+					series.push({label:tmp[1]||i,data:tmp[0] - 0});
+				}else if(isNum(tmp[1])){
+					series.push({label:tmp[0]||i,data:tmp[1] - 0});
+				}
+			}
+		}
+		return series;
+	}
 
 	function genChart(){
+		$("#demo1").html("")
 		var config = genConfig();
+		var data = formatData($("#J_series").val());
+		S.mix(config,{data:data});
 		var piechart = new PieChart(config)
 		$("#J_codePane").val(JsonUti.convertToString(config));
 	}
 
 	genChart()
+
+	$("#J_btnGen").on("click", function() {
+		genChart();
+	});
 	// $("#J_btnGen").on("click", function() {
 	// 	var config = genConfig(),
 	// 		seriesData,

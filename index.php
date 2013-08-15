@@ -28,11 +28,10 @@
 		<h1 id="J_ChartName">折线图</h1>
 		<h6 id="J_ChartContent">折线图可显示随X轴（多为时间）变化的连续数据，适用于显示在相等时间间隔下数据的趋势。</h6>
 		<a href="lib.php" class="see-all">查看所有图表</a>
-		<div class="clearfix">
-			<div class="preview">
+		<div class="clearfix preview-bd bd-outer">
+			<div class="preview bd-inner">
 				<iframe id="J_Iframe" src="demos/linechart.html" scrolling="no" width="917" height="371"></iframe>
 			</div>
-		</div>
 		<div class="chart-list">
 			<div id="J_ChartList" class="scrollable">
 			    <span id="scroller-prev" class="prev disable">&lsaquo;</span>
@@ -55,6 +54,7 @@
 			    </div>
 			</div>
 		</div>
+		</div>
 	</div>
 </div>
 
@@ -63,27 +63,40 @@
 		<h1>最近正在使用KCharts的项目</h1>
 		<div class="wrapper">
 		<ul class="clearfix">
-			<li><img src="http://img01.taobaocdn.com/tps/i1/T1p2qoXpRaXXaZNWYj-176-80.png" alt="旺铺装修分析"/></li>
-			<li><img src="http://img02.taobaocdn.com/tps/i2/T1aSKmXuVgXXaZNWYj-176-80.png" alt="店铺实验室"/></li>
-			<li><img src="http://img04.taobaocdn.com/tps/i4/T1s3WoXzBaXXaZNWYj-176-80.png" alt="实拍保护"/></li>
-			<li><img src="http://img02.taobaocdn.com/tps/i2/T1u7GaXr0hXXaZNWYj-176-80.png" alt="麦麦"/></li>
-			<li><img src="http://img03.taobaocdn.com/tps/i3/T1EiekXDhiXXaZNWYj-176-80.png" alt="成交记录"/></li>
+			<li><img src="http://img04.taobaocdn.com/tps/i4/T17EChFeFaXXaZNWYj-176-80.png" alt="旺铺装修分析"/></li>
+			<li><img src="http://img04.taobaocdn.com/tps/i4/T1RYidFmdgXXaZNWYj-176-80.png" alt="店铺实验室"/></li>
+			<li><img src="http://img01.taobaocdn.com/tps/i1/T1Z55gFh4aXXaZNWYj-176-80.png" alt="实拍保护"/></li>
+			<li><img src="http://img03.taobaocdn.com/tps/i3/T19XKeFlVgXXaZNWYj-176-80.png" alt="麦麦"/></li>
+			<li><a href="http://jing.alibaba-inc.com/?ticket=95b3ffa4-7485-462c-af80-fea610e111f6" target="_blank"><img src="http://img02.taobaocdn.com/tps/i2/T14G1gFmFbXXaZNWYj-176-80.png" alt="昆仑镜"/></a></li>
 		</ul>
 		</div>
-		<div class="contect-wrapper"><a class="contect-us" href="#">联系我们</a>期待和你合作:)</div>
+		<div class="contect-wrapper">
+			<span  class="ww-light ww-large" data-nick="KCharts%E4%BD%BF%E7%94%A8%E4%BA%A4%E6%B5%81" 
+data-tnick="KCharts%E4%BD%BF%E7%94%A8%E4%BA%A4%E6%B5%81" data-encode="true" data-display="inline">
+<a class="contect-us" href="http://www.taobao.com/webww/?ver=1&touid=818302516&
+siteid=cntaobao&status=2&portalId=&
+gid=b2be10ade26ceb489a62d1b95eba0619&itemsId=" target="_blank" 
+class="ww-inline ww-online" >联系我们</a></span><span class="coperation"> 期待和你合作:)</span></div>
 	</div>
 </div>
 
 <div class="kc-bottom-banner">
 	<div class="inner">
+		<div class="offer">
+			我们为您提供
+		</div>
 		<div class="clearfix">
-			<div class="item left">
-				<h3>图表加工</h3>
-				<p>KCharts提供的图表样式上不满足需求，我们将帮你进行调整，达到你想要的外观。</p>
+			<div class="item left bd-outer">
+				<div class="bd-inner">
+					<h3>图表加工</h3>
+					<p>KCharts提供的图表样式上不满足需求，我们将帮你进行调整，达到你想要的外观。</p>
+				</div>
 			</div>
-			<div class="item right">
-				<h3>新图表定制</h3>
-				<p>KCharts没有你需要的图表？不用担心，可以直接给我们提需求，我们帮你定制图表。</p>
+			<div class="item right bd-outer">
+				<div class="bd-inner">
+					<h3>新图表定制</h3>
+					<p>KCharts没有你需要的图表？不用担心，可以直接给我们提需求，我们帮你定制图表。</p>
+				</div>
 			</div>
 		</div>
 	</div>
