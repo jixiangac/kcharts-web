@@ -2,7 +2,7 @@
 
 	var $ = S.all,Evt = S.Event;
 
-	var version = "1.1",
+	var version = "1.2",
 		demoroot = './demos/'+version+'/demo/',
 		chartType;
 

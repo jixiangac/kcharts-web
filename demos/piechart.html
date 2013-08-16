@@ -1,80 +1,246 @@
 <!doctype html>
 <html>
-<head>
-  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-<link rel="stylesheet" href="http://a.tbcdn.cn/p/global/1.0/global-min.css" />
-<style>
-#demo1{
-  width:917px;
-  height:371px;
-  margin:0px auto;
-}
-#demo1 .ks-charts-legend ul li{
-  float: left;  
-  padding: 10px;
-}
-#demo1 .ks-charts-legend .disable{
-  color:#ccc;
-}
-#demo1 .ks-charts-legend .legend-text{
-  padding-left: 5px;
-}
-</style>
-</head>
-<body>
-<div id="demo1">
+  <head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<link rel="stylesheet" href="http://a.tbcdn.cn/p/global/1.0/global-min.css" />
+		<title>嵌套饼图</title>
+	<style type="text/css" media="screen">
+		.pi-con{
+				/* border:1px solid #999; */
+                width:750px;height:300px;margin:10px 0 0 10px;
+				float:left;margin-left:80px;
+		}
+		.clear-both{
+				clear:both;
+		}
 
-</div>
-<script src="http://a.tbcdn.cn/s/kissy/1.3.0/kissy-min.js"></script>
-<script type="text/javascript">
-KISSY.Config.combine = true;
-KISSY.use('gallery/kcharts/1.1/piechart/index',function(S,PieChart){
+		.kcharts-label{
+				color:#0579C6;
+				cursor:pointer;
+		}
+	</style>		
+  </head>
+  <body>
+    <div id="J_Pie1" class="pi-con">
+    </div>
+		<script charset="utf-8" src="http://a.tbcdn.cn/s/kissy/1.3.0/kissy-min.js"></script>
+		<link rel="stylesheet" href="../../tip/assets/tip.css" type="text/css" media="screen" />
+	  <script type="text/javascript">
+		 /* 如果你使用kissy 1.2，需要下面的包配置
+		 KISSY.config({
+			 packages:[{
+				 name:'gallery',
+				 path:'http://a.tbcdn.cn/s/kissy'
+			 }]
+		 });
+		 */
+		</script>
+	<!-- <script type="text/javascript" src="../../piechart/src/animation.js"></script> -->
+	<!-- <script type="text/javascript" src="../../piechart/src/util.js"></script> -->
+	<!-- <script type="text/javascript" src="../../piechart/src/sector.js"></script> -->
+	<!-- <script type="text/javascript" src="../../piechart/src/label.js"></script> -->
+	<!-- <script type="text/javascript" src="../../piechart/index.js"></script> -->
 
-  var dataAry = [45,26.8,12.8,8.5,6.2,0.7];
+	<!-- <script type="text/javascript" src="../../tip/index.js"></script> -->
 
-  var getRate = function(index){
-    var total = 0;
-    for(var i in dataAry){
-      total += dataAry[i];
-    }
-    return dataAry[index]/total * 100 + "%";
-  };
+	<script type="text/javascript">
+		KISSY.use("gallery/kcharts/1.2/piechart/index,gallery/kcharts/1.2/tip/index",function(S,Pie,Tip){
+			function pie1(){
+				var tip
+				function getTip(){
+					if(!tip){
+						tip = new Tip({rootNode:S.one('#J_Pie1')});
+					}
+					return tip;
+				}
 
-  var data = [
-  {data:45,label:'Firefox '+getRate(0),'tip':'Firefox'},
-  {data:26.8,label:'IE '+getRate(1),'tip':'IE'},
-  {data:12.8,label:'Chrome '+getRate(2),'tip':'Chrome'},
-    {data:8.5,label:'Safari '+getRate(3),'tip':'Safari'},
-      {data:6.2,label:'Opera '+getRate(4),'tip':'Opera'},
-      {data:0.7,label:'Others '+getRate(5),'tip':'Others'}
-  ]
+				var data = [
+						{
+							label:"需处理",
+							data:[
+								{
+									label:"超区",
+									data:1
+								},{
+									label:"无法联系买家",
+									data:1
+								},{
+									label:"面单信息丢失",
+									data:1
+								}]
+						},{
+							label:"需安抚",
+							data:[{
+								label:"自提件",
+								data:1
+							},{
+								label:"快递操作延时",
+								data:1
+							}]
+						},{
+							label:"需知晓",
+							data:[
+								{
+									label:"快递操作延时",
+									data:1
+								},{
+									label:"节假日",
+									data:1
+								},{
+									label:"不可抗力",
+									data:1
+								}]
+						}]
 
-  var piechart = new PieChart({
-    renderTo:'#demo1',
-    cx:460,
-    cy:180,
-    R:100,
-    r:60,
-    data:data,
-    anim:{
-      type:'sector',
-      easing:'bounceOut',
-      duration:1000
-    },
-    tip:{
-      boundryDetect:true,
-      tpl:"{{tip}} {{percent*100+'%'}}"
-    }
-  });
+				var cfg = {
+					data:data,
+					color:{
+						initial:"#f00"
+					},
+					renderTo:"#J_Pie1",
+					rs:[70,100],
+					interval:5,
+					anim:{
+						easing:'swing',
+						duration:800
+					}
+				}
 
-  piechart.on('click',function(e){
-    S.log(e.target)
-    var sector = e.target
-      ,unit = 10
-    piechart.transformSector(sector,unit);
-  });
-});
+				var pie = new Pie(cfg)
+					, ms = 200
 
-</script>
-</body>
+				var prevset
+					, prevsector
+				function onclick(e){
+					if(this.isRunning()){
+						return;
+					}
+					var sector = e.sector
+						, $path = sector.get("$path")
+						, groupindex = sector.get('groupIndex')
+						, donutindex = sector.get('donutIndex')
+						, donut = S.indexOf(0,groupindex) == -1
+						, set = sector.get('set')
+
+						, middleangle = sector.get('middleangle')
+						, angel = middleangle*Math.PI/180
+						, unit = 10
+						, x = unit*Math.cos(angel)
+						, y = -unit*Math.sin(angel)
+
+					if(donut){
+						if(prevset){
+							if(prevset == set){
+								prevset.animate({transform:""},ms,function(){
+									if(prevsector && prevsector == $path){
+										$path.animate({transform:""},ms);
+										prevsector = null;
+									}else{
+										$path.animate({transform:'t'+x+' '+ y},ms);
+										prevsector = $path;
+									}
+								});
+							}else{
+								prevset.animate({transform:""},ms);
+								prevset = null;
+								if(prevsector && prevsector == $path){
+									$path.animate({transform:""},ms);
+									prevsector = null;
+								}else{
+									$path.animate({transform:'t'+x+' '+ y},ms);
+									prevsector = $path;
+								}
+							}
+						}else{
+							if(prevsector){
+								if(prevsector == $path){
+									$path.animate({transform:''},ms);
+									prevsector = null;
+								}else{
+									prevsector.animate({transform:''},ms);
+									$path.animate({transform:'t'+x+' '+ y},ms);
+									prevsector = $path;
+								}
+							}else{
+								$path.animate({transform:'t'+x+' '+ y},ms);
+								prevsector = $path;
+							}
+						}
+					}else{
+						if(prevsector){
+							if(prevsector == $path){
+								prevsector.animate({transform:""},ms);
+								prevsector = null;
+							}else{
+								prevsector.animate({transform:""},ms);
+								prevsector = $path
+							}
+						}
+						if(prevset){
+							if(prevset == set){
+								prevset.animate({transform:""},ms);
+								prevset = null;
+							}else{
+								prevset.animate({transform:""},ms);
+								set.animate({transform:'t'+x+' '+ y},ms);
+								prevset = set;
+							}
+						}else{
+							set.animate({transform:'t'+x+' '+ y},ms);
+							prevset = set;
+						}
+					}
+				}
+				pie.on("click",onclick);
+
+				pie.on("labelclick",function(e){
+					var sector = e.sector
+					sector.fire("click");
+				});
+
+				pie.on("mouseover",function(e){
+					var sector = e.sector
+						, middlex = sector.get("middlex")
+						, middley = sector.get("middley")
+						, isleft = sector.get("isleft")
+						, data = sector.get("framedata")
+						, label = data.label
+						, size = Pie.getSizeOf(label)
+						, tip = getTip()
+						, $tip = tip.getInstance()
+						, groupindex = sector.get('groupIndex')
+						, donutindex = sector.get('donutIndex')
+						, donut = S.indexOf(0,groupindex) == -1
+						, x
+						, y
+
+					if(!donut){
+						tip.renderTemplate("{{label}}",{label:label});
+						if(isleft){
+							x = middlex - size.width - 10
+						}else{
+							x = middlex;
+						}
+						y=middley;
+						tip.fire('move',{x:x,y:y});
+					}
+				});
+
+				pie.on("mouseleave",function(){
+					tip && tip.hide();
+					prevset && prevset.animate({"transform":""},ms);
+					prevsector && prevsector.animate({"transform":""},ms);
+					prevset = null;
+					prevsector = null;
+				});
+
+				pie.on("afterRender",function(){
+		      // do sth
+				});
+			}
+			pie1();
+		})
+	</script>
+  </body>
 </html>
