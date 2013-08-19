@@ -14,7 +14,7 @@ $chartType = isset($_GET['type']) ? $_GET['type'] : "linechart";
 				<li class="<?php if($chartType == "barchart"){ echo "cur";} ?>"><a class="sider-menu barchart " href="./lib.php?type=barchart" chartType="barchart">柱状图<i></i></a></li>
 				<li class="<?php if($chartType == "piechart"){ echo "cur";} ?>"><a class="sider-menu piechart " href="./lib.php?type=piechart" chartType="piechart">饼图<i></i></a></li>
 				<li class="<?php if($chartType == "scatterchart"){ echo "cur";} ?>"><a class="sider-menu scatterchart" href="./lib.php?type=scatterchart" chartType="scatterchart">散点图<i></i></a></li>
-				<li class="<?php if($chartType == "dashboard"){ echo "cur";} ?>"><a class="sider-menu dashboard" href="./lib.php?type=dashboard" chartType="dashboard">仪表盘<i></i></a></li>
+				<!-- <li class="<?php if($chartType == "dashboard"){ echo "cur";} ?>"><a class="sider-menu dashboard" href="./lib.php?type=dashboard" chartType="dashboard">仪表盘<i></i></a></li> -->
 				<li class="<?php if($chartType == "mapchart"){ echo "cur";} ?>"><a class="sider-menu mapchart" href="./lib.php?type=mapchart" chartType="mapchart">地图<i></i></a></li>
 				<li class="<?php if($chartType == "sumdetailchart"){ echo "cur";} ?>"><a class="sider-menu sumdetailchart" href="./lib.php?type=sumdetailchart" chartType="sumdetailchart">棒棒糖图<i></i></a></li>
 			</ul>

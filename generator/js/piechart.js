@@ -33,27 +33,6 @@ KISSY.add(function(S,PieChart) {
 					}
 				})(this),
 				attrType = this.attr("attrtype");
-
-			if (attrName && (subAttrVal || false === subAttrVal)) {
-				if (!config[attrName]) {
-					config[attrName] = {};
-				}
-
-				if (attrType && !config[attrName][attrType]) {
-					config[attrName][attrType] = {};
-				}
-
-				if (subAttrName) {
-					if (attrType) {
-						config[attrName][attrType][subAttrName] = subAttrVal;
-					} else {
-						config[attrName][subAttrName] = subAttrVal;
-					}
-				} else {
-					config[attrName] = subAttrVal;
-				}
-
-			}
 		})
 		return S.mix(defaultCfg, config, undefined, undefined, true);
 	}
@@ -111,7 +90,7 @@ KISSY.add(function(S,PieChart) {
 						var levelUp = level + 2; //层级+2
 						var tempArrValue = []; //集合元素相关字符串缓存片段
 						for (var i = 0; i < val.length; i++) {
-							//递归写对象                         
+							//递归写对象
 							tempArrValue.push(JsonUti.__writeObj(val[i], levelUp, true));
 						}
 
@@ -188,6 +167,13 @@ KISSY.add(function(S,PieChart) {
 		var data = formatData($("#J_series").val());
 		S.mix(config,{data:data});
 		var piechart = new PieChart(config)
+        //删除endframe这个side effect
+        config = S.clone(config);
+
+        if(config.anim){
+          delete config.anim.endframe;
+        }
+
 		$("#J_codePane").val(JsonUti.convertToString(config));
 	}
 
