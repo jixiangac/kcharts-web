@@ -38,6 +38,7 @@ border-right: 1px solid #fff;
 .nav li a,.nav li a:hover{ color:#444; text-decoration: none; }
 .nav .active a,.nav .active a:hover{ color:#fff; }
 .preview{border: none;}
+.bd-outer { border: 5px solid #ebebeb;}
 /*.bd-outer,.ks-overlay{ border:5px solid #ebebeb; }*/
 .bd-inner,.ks-contentbox{ border:1px solid #d3d3d3; }
 .bd-outer,.bd-inner, .ks-overlay,.ks-contentbox{border-radius: 3px 3px 3px 3px;-moz-border-radius: 3px 3px 3px 3px;-webket-border-radius: 3px 3px 3px 3px;}

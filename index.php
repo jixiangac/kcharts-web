@@ -44,7 +44,7 @@
 			            <div class="chart-icon dashboard" charttype="dashboard" chartname="仪表盘" chartcontent="仪表盘"><a href='javascript:void(0)'></a></div>
 			            <div class="chart-icon scatterchart" charttype="scatterchart" chartname="散点图" chartcontent="如果数据集中包含非常多的点（例如，几千个点），那么散点图便是最佳图表类型。"><a href='javascript:void(0)'></a></div>
 			            <div class="chart-icon ratiochart" charttype="ratiochart" chartname="画报" chartcontent="画报"><a href='javascript:void(0)'></a></div>
-			            <div class="chart-icon mapchart" charttype="mapchart" chartname="地图" chartcontent="地图用于展示数据在各个区域内的分布情况。"><a href='javascript:void(0)'></a></div>
+			            <div class="chart-icon mapchart last" charttype="mapchart" chartname="地图" chartcontent="地图用于展示数据在各个区域内的分布情况。"><a href='javascript:void(0)'></a></div>
 			        </div>
 			        <ul class="ks-switchable-nav">
 			            <li class="ks-active">&bull;</li>

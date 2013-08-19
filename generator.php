@@ -145,7 +145,7 @@ include_once('header.php');
                     <i class="arrow arrow-up"></i>
                 </a>
 
-                <div class="sel-content bd-outer" id="J_SelContent">
+                <div class="sel-content bd-outer" id="J_SelContent" style="height: 0;">
                     <div class="bd-inner sel-content-inner">
                         <ul class="clearfix">
                             <li class="icon-chart icon-linechart" data-type="折线图"><a class="cur"
