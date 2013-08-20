@@ -15,7 +15,7 @@
 		$(".hide-content",$(e.currentTarget)).stop().animate({marginTop:0,opacity:0},0.3,"easeIn");
 	});
 
-  
+
 
   // KISSY.use('gallery/slide/1.1/',function(S,Slide){
   //   var s = new Slide('JSlide',{
@@ -94,6 +94,6 @@
        		$("a",$("#J_ChartIcons")).removeClass("cur");
        		$a.addClass("cur");
        });
-       
+
 });
 })(KISSY);
