@@ -181,7 +181,7 @@
 	font-family: Microsoft Yahei;
 	color:#000;
 	font-weight: normal;
-	padding-top: 10px;
+	padding-top: 50px;
 	padding-left: 40px;
 }
 .kc-main-content .inner h6{
@@ -228,6 +228,11 @@
 	width:130px;
 	height:130px;
 	border-right:1px solid #ccc;
+    margin-right: 1px;
+}
+
+kc-main-content .inner .chart-list .last{
+    margin: 0;
 }
 .kc-main-content .inner .chart-list .ks-switchable-content a{
 	width:130px;
@@ -239,43 +244,43 @@
 	background: url('http://img03.taobaocdn.com/tps/i3/T1bGmkXphhXXckL6Z0-130-130.png') no-repeat;
 }
 .kc-main-content .inner .chart-list .ks-switchable-content .linechart a:hover,.kc-main-content .inner .chart-list .ks-switchable-content .linechart .cur{
-	background: url('http://img04.taobaocdn.com/tps/i4/T10a1lXzhbXXckL6Z0-130-130.png') no-repeat;
+	background: url('http://img01.taobaocdn.com/tps/i1/T1dl1mFXRdXXckL6Z0-130-130.png') no-repeat;
 }
 .kc-main-content .inner .chart-list .ks-switchable-content .barchart a{
 	background: url('http://img01.taobaocdn.com/tps/i1/T1pR1kXuXeXXckL6Z0-130-130.png') no-repeat;
 }
 .kc-main-content .inner .chart-list .ks-switchable-content .barchart a:hover,.kc-main-content .inner .chart-list .ks-switchable-content .barchart .cur{
-	background: url('http://img02.taobaocdn.com/tps/i2/T1uVemXAdaXXckL6Z0-130-130.png') no-repeat;
+    background: url('http://img02.taobaocdn.com/tps/i2/T1hw5nFg0cXXckL6Z0-130-130.png') no-repeat;
 }
 .kc-main-content .inner .chart-list .ks-switchable-content .piechart a{
 	background: url('http://img01.taobaocdn.com/tps/i1/T1IjmkXsheXXckL6Z0-130-130.png') no-repeat;
 }
 .kc-main-content .inner .chart-list .ks-switchable-content .piechart a:hover,.kc-main-content .inner .chart-list .ks-switchable-content .piechart .cur{
-	background: url('http://img04.taobaocdn.com/tps/i4/T1EcGmXx0XXXckL6Z0-130-130.png') no-repeat;
+    background: url('http://img04.taobaocdn.com/tps/i4/T1U1WpFaVaXXckL6Z0-130-130.png') no-repeat;
 }
 .kc-main-content .inner .chart-list .ks-switchable-content .dashboard a{
 	background: url('http://img01.taobaocdn.com/tps/i1/T1lsWkXuXgXXckL6Z0-130-130.png') no-repeat;
 }
 .kc-main-content .inner .chart-list .ks-switchable-content .dashboard a:hover,.kc-main-content .inner .chart-list .ks-switchable-content .dashboard .cur{
-	background: url('http://img02.taobaocdn.com/tps/i2/T1VdulXzXcXXckL6Z0-130-130.png') no-repeat;
+	background: url('http://img04.taobaocdn.com/tps/i4/T1cb5lFnNgXXckL6Z0-130-130.png') no-repeat;
 }
 .kc-main-content .inner .chart-list .ks-switchable-content .scatterchart a{
 	background: url('http://img03.taobaocdn.com/tps/i3/T1Wt1kXpJfXXckL6Z0-130-130.png') no-repeat;
 }
 .kc-main-content .inner .chart-list .ks-switchable-content .scatterchart a:hover,.kc-main-content .inner .chart-list .ks-switchable-content .scatterchart .cur{
-	background: url('http://img01.taobaocdn.com/tps/i1/T1sPCmXwReXXckL6Z0-130-130.png') no-repeat;
+	background: url('http://img02.taobaocdn.com/tps/i2/T1WTOlFc8fXXckL6Z0-130-130.png') no-repeat;
 }
 .kc-main-content .inner .chart-list .ks-switchable-content .ratiochart a{
 	background: url('http://img02.taobaocdn.com/tps/i2/T1SxylXE0bXXckL6Z0-130-130.png') no-repeat;
 }
 .kc-main-content .inner .chart-list .ks-switchable-content .ratiochart a:hover,.kc-main-content .inner .chart-list .ks-switchable-content .ratiochart .cur{
-	background: url('http://img04.taobaocdn.com/tps/i4/T1xYemXqxaXXckL6Z0-130-130.png') no-repeat;
+	background: url('http://img03.taobaocdn.com/tps/i3/T13rCpFoJXXXckL6Z0-130-130.png') no-repeat;
 }
 .kc-main-content .inner .chart-list .ks-switchable-content .mapchart a{
 	background: url('http://img01.taobaocdn.com/tps/i1/T1rRajXv8gXXckL6Z0-130-130.png') no-repeat;
 }
 .kc-main-content .inner .chart-list .ks-switchable-content .mapchart a:hover,.kc-main-content .inner .chart-list .ks-switchable-content .mapchart .cur{
-	background: url('http://img02.taobaocdn.com/tps/i2/T1M548XrXhXXckL6Z0-130-130.png') no-repeat;
+	background: url('http://img01.taobaocdn.com/tps/i1/T1_p5nFlpcXXckL6Z0-130-130.png') no-repeat;
 }
 .kc-main-content .inner .chart-list .prev,.kc-main-content .inner .chart-list .next{
 	display: block;
@@ -458,6 +463,7 @@
 	background: #333;
 	color:#fff;
 	text-align: center;
+    position: relative;
 }
 .kc-footer .inner{
 	height:306px;
@@ -536,9 +542,11 @@
 }
 
 .kc-footer .inner .powerby{
-	color:#ccc;
+	color:#666;
 	line-height: 50px;
 	font-family: Microsoft Yahei;
+    position: absolute;
+    bottom: 10px;
 }
 
 .clearfix{zoom:1;}
