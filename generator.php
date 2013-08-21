@@ -3,7 +3,7 @@ include_once('header.php');
 ?>
     <style>
         .main-container {
-            padding-top: 86px;
+            padding-top: 50px;
             padding-bottom: 80px;
             background: url('http://img03.taobaocdn.com/tps/i3/T1YXWgFcVbXXcCXlfb-25-25.png') repeat;
         }
@@ -125,7 +125,7 @@ include_once('header.php');
         }
 
         .sel-container {
-            padding-bottom: 90px;
+            padding-bottom: 60px;
         }
 
         .icon-datetime:hover, .icon-datetime .cur {
