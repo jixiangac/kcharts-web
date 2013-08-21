@@ -62,11 +62,11 @@
     var timer=setInterval(toNext,3000);
     oJSlide.onmouseover=function(){
       clearInterval(timer);
-    }
+    };
 
     oJSlide.onmouseout=function(){
       timer=setInterval(toNext,3000);
-    }
+    };
   })();
 
 	KISSY.use("event,switchable", function(S, Event,Switchable) {
