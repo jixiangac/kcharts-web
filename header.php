@@ -12,7 +12,6 @@
 <link rel="stylesheet" href="http://a.tbcdn.cn/p/global/1.0/global-min.css" />
 <link rel="stylesheet" href="css/index.css" />
 <script src="http://a.tbcdn.cn/??s/kissy/1.3.0/kissy-min.js"></script>
-<script type="text/javascript" src="js/common.js"></script>
 </head>
 <body>
 <div class="kc-header">
@@ -65,7 +64,7 @@ if(strstr($location, "index.php")){
 <li><a href="https://github.com/kissygalleryteam/kcharts" target="_blank">github</a></li>
 <li class="box"></li>
 </ul>
-<script type="text/javascript" src="js/navigator.js"></script>
 	</div>
 
 </div>
+<script type="text/javascript" src="js/nav.js"></script>
