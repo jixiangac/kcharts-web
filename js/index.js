@@ -33,7 +33,7 @@
   (function(){
     var oJSlide=$('#JSlide')[0];
     var aBtn=$('#JSlide li');
-    var oDiv=$('#JSlide .tab-content')[0];
+    var oDiv=$('#JSlide .tab-content');
     var aDiv=$('#JSlide .tab-pannel');
     var cWidth=aDiv[0].offsetWidth;
     var now=0;
@@ -50,7 +50,7 @@
         aBtn[i].className='';
       }
       aBtn[now].className='selected';
-      startMove(oDiv,{left:-now*cWidth});
+      oDiv.stop().animate({'left':-now*cWidth},0.6,'easeOutStrong');
     }
 
     function toNext(){
