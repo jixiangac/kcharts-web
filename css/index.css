@@ -25,18 +25,26 @@
 }
 .kc-header .inner .nav li{
 	float: left;
+	text-align: center;
+	padding: 0 20px;
+	cursor: pointer;
 }
 .hidden{
 	display: none;
 }
 .kc-header .inner .nav li a{
 	display: inline-block;
-	height: 40px; padding:0 20px;
+	height: 40px; 
 	color:#000;line-height: 40px;font-size: 16px;
 	text-align: center;
 	position: relative;
 	z-index: 2;
 	text-decoration: none;
+}
+
+.kc-header .inner .nav li a:hover,.kc-header .inner .nav li.cur a:hover
+{
+	color: #74aed2
 }
 .kc-header .inner .nav li.cur{
 	/*border-bottom: 3px solid #74aed2;*/
@@ -50,6 +58,7 @@
  	left:0px; top: 60px; 
  	border-bottom: 3px solid #74aed2;
  	z-index:1;
+ 	padding: 0;
 
 }
 

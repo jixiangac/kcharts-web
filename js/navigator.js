@@ -3,9 +3,9 @@ var oNav=document.getElementById('nav');
 var aLi=oNav.getElementsByTagName('li');
 var oBox=getByClass(oNav,'box')[0];
 var oCur=getByClass(oNav,'cur')[0];
-oBox.style.left=oCur.offsetLeft+'px';
+oBox.style.left=oCur.children[0].offsetLeft+'px';
 
-oBox.style.width=oCur.offsetWidth+'px';
+oBox.style.width=oCur.children[0].offsetWidth+'px';
 
 var left=0;
 	
@@ -14,12 +14,12 @@ for(var i=0;i<aLi.length-1;i++)
 	aLi[i].index=i;
 	aLi[i].onmouseover=function()
 	{
-		bufferMove(oBox,{left:this.offsetLeft,width:this.offsetWidth},4);
+		bufferMove(oBox,{left:this.children[0].offsetLeft,width:this.children[0].offsetWidth},4);
 	}
 	
 	aLi[i].onmouseout=function()
 	{
-		bufferMove(oBox,{left:oCur.offsetLeft,width:oCur.offsetWidth},4);
+		bufferMove(oBox,{left:oCur.children[0].offsetLeft,width:oCur.children[0].offsetWidth},4);
 	}
 }
 
