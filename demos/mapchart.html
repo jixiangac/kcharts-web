@@ -6,13 +6,13 @@
     <style type="text/css">
 
         #demo1 {
-            width:480px;
+            width: 480px;
             /*height:371px;*/
-            margin:0px auto;
+            margin: 0px auto;
             font-size: 10px;
             font-family: Microsoft Yahei;
-            -webkit-text-size-adjust:none;   
-            -webkit-tap-highlight-color:rgba(0,0,0,0);    
+            -webkit-text-size-adjust: none;
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
         }
 
         #b1 {
@@ -30,44 +30,59 @@
 <script src="http://a.tbcdn.cn/??s/kissy/1.3.0/kissy-min.js"></script>
 <script type="text/javascript">
     (function (S) {
-        S.Config.combine = true;
+        $ = KISSY.all;
+        S.Config.debug = true;
+
         S.use('gallery/kcharts/1.1/mapchart/index', function (S, MapChart) {
+            var h = screen.availHeight * 0.7;
+            $('#map').css("height", h);
             var map = new MapChart('#demo1', {
-                themeCls:"ks-chart-default",
-                title:{
-                    content:"A Simple China Map",
-                    css:{
-                        "font-family":"Microsoft Yahei",
-                        "font-size":"16px",
-                        "font-weight":"bold"
-                    }
+                themeCls: "ks-chart-default",
+                autoRender: false,
+                tip: {
+                    isShow: false
                 },
-                tip:{
-                    template:"Lv.{{rate}}",
-                    css:{border:"1px solid #666"}
-                },
-                cssGroup:{style1:{attr:{"fill":"#8cc63e", "stroke":"#ffffff", 'stroke-width':3}, hoverAttr:{"fill":"#066839"}}, style2:{attr:{"fill":"#00adef"}, hoverAttr:{"fill":"#1176ba"}}, style3:{attr:{"fill":"#bf1e2d", "stroke":"#ffffff", 'stroke-width':3}, hoverAttr:{"fill":"#ec1d23"}}, defaultCls:"style1"},
-                cb:{
-                    over:function (d) {
-                        S.log('进入' + d[1]);
+                cssGroup: {
+                    style1: {
+                        attr: {"fill": "#f0efeb", "stroke": "#ccc6ae", 'stroke-opacity': 0.25},
+                        hoverAttr: {"fill": "#f0efeb", "stroke": "#ccc6ae", 'stroke-opacity': 0.25}
                     },
-                    move:function (d) {
-                        //todo
-                    },
-                    out:function (d) {
-                        S.log('离开' + d[1]);
-                    }
+                    defaultCls: "style1"
                 },
-                areaText:{
-                    css:{
-                        color:"#fff",
-                        "text-shadow":"1px 1px #000"
-                    }
-                },
-                series:{
-                    "xizang":{groupKey:'style2', rate:4}, "guizhou":{rate:4}, "fujian":{groupKey:'style3',rate:6}, "chongqing":{rate:4}, "sichuan":{groupKey:'style3',rate:6}, "shanghai":{groupKey:'style2',rate:4}, "jiangsu":{rate:4}, "zhejiang":{rate:4}, "shanxi":{rate:3}, "neimongol":{groupKey:'style2',rate:6}, "tianjin":{groupKey:'style3',rate:6}, "hebei":{rate:3}, "beijing":{groupKey:'style2'}, "anhui":{rate:3}, "yunnan":{rate:4}, "jiangxi":{rate:3}, "shandong":{groupKey:'style2'}, "henan":{rate:2}, "hunan":{rate:3}, "guangxi":{groupKey:'style3,rate:6'}, "guangdong":{rate:2}, "hainan":{groupKey:'style3',rate:6}, "xinjiang":{groupKey:'style2',rate:6}, "ningxia":{rate:3}, "qinghai":{rate:6}, "gansu":{rate:3}, "shaanxi":{rate:3}, "heilongjiang":{rate:3}, "jilin":{rate:3}, "liaoning":{rate:3}, "hubei":{rate:3}
-                }
+                series: {}
             });
+            map.on('afterRender', function () {
+                var cs = 'city-st',
+                        self = this,
+                        timer,
+                        span = '<span></span>',
+                        tip = $('.node-tip'),
+                        container = '.ks-chart-area-text';
+
+                S.each(allCdnNode, function (item, index) {
+                    var style = self.converPix(item.x, item.y), num = item.data.length;
+                    style = S.merge(style, {
+                        "backgroundSize": [Math.sqrt(num) * 3, "px ", Math.sqrt(num) * 3, "px"].join('')
+                    })
+                    $(span).attr('title', index).addClass(cs).css(style).appendTo(container).on('mouseenter',function (e) {
+                        var tar = this, offset = $(tar).offset();
+                        timer && clearTimeout(timer);
+                        tip.text([index, '有', num, '个CDN节点'].join('')).show().stop().animate({
+                            left: offset.left + 10,
+                            top: offset.top
+                        }, {
+                            duration: 0.3,
+                            easing: 'easeIn'
+                        });
+                    }).on('mouseleave', function () {
+                                timer = setTimeout(function () {
+                                    tip.hide();
+                                }, 2000);
+                            })
+                })
+            })
+            map.render();
+
         });
     })(KISSY);
 </script>
