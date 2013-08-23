@@ -54,7 +54,7 @@ select{font-size: 14px;width:230px;line-height: 30px;height: 30px;}
 .scroll-wrapper{overflow-y:scroll;overflow-x:hidden;height: 480px;}
 .btn-more-config-wrapper{text-align: right;padding:0px;}
 .more-config-panel{display: none;}
-.btn-more-config{color:#52a3cc;font-size: 16px;}
+.btn-more-config{color:#52a3cc;font-size: 12px;}
 .scroll-x{overflow-x:scroll;}
 .scroll-y{overflow-y:scroll;}
 .triangle{

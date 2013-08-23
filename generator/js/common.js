@@ -34,17 +34,22 @@ KISSY.use("overlay", function (S, Overlay) {
     })
 
     function pop() {
-        var o = new Overlay.Dialog({
-            width: 750,
-            height: 400,
-            clsStyle: {
-                position: S.UA.ie == 6 ? "absolute" : "fixed"
-            },
-            bodyContent: $("#J_series")[0],
-            headerContent: "<div class='kc-title'>填充数据</div>"
-        });
-        o.center();
-        o.show();
-
+        if (!window.pop) {
+            var o = new Overlay.Dialog({
+                width: 750,
+                height: 400,
+                align: {
+                    points: ['cc', 'cc']
+                },
+                elStyle: {
+                    position: S.UA.ie == 6 ? "absolute" : "fixed"
+                },
+                bodyContent: $("#J_series")[0],
+                headerContent: "<div class='kc-title'>填充数据</div>"
+            });
+            window.pop = o;
+        }
+        window.pop.center();
+        window.pop.show();
     }
 });

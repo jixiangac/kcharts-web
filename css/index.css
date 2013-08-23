@@ -370,9 +370,8 @@ kc-main-content .inner .chart-list .last{
 
 .kc-main-content .see-all{
 	display: block;
-	width:100px;
 	text-align: right;
-	padding-right: 10px;
+    padding-bottom: 10px;
 	position: absolute;
 	margin:-29px 0px 0px 859px;
 	font-family: Microsoft Yahei;
@@ -380,8 +379,10 @@ kc-main-content .inner .chart-list .last{
 	font-size: 14px;
 	color:#666;
 }
+
 .kc-main-content .see-all:hover{
-	color:#f60;
+    border-bottom: 3px solid #74aed2;
+    color: #74aed2;
 }
 
 
