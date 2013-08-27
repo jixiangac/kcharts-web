@@ -8,12 +8,12 @@
         if (!$J_SelContent.hasClass("isdown")) {
             // $J_SelContent.addClass("isdown").stop().animate({height:"114px"},1,function(){});
             $J_SelContent.addClass("isdown").show();
-            anim('#J_SelContent', {"height": "114px"}, 1, 'bounceOut',function () {
+            anim('#J_SelContent', {"height": "114px"}, 0.5, 'swing',function () {
             }).run();
         } else {
             // $J_SelContent.removeClass("isdown").stop().animate({height:0},1,function(){});
             $J_SelContent.removeClass("isdown");
-            anim('#J_SelContent', {"height": "0"}, 1, 'bounceOut',function () {
+            anim('#J_SelContent', {"height": "0"}, 0.5, 'swing',function () {
                 $J_SelContent.hide();
             }).run();
         }
