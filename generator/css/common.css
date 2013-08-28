@@ -68,3 +68,8 @@ select{font-size: 14px;width:230px;line-height: 30px;height: 30px;}
   border-color:transparent transparent #586c7c transparent;
   top:7px;
 }
+.ks-overlay-mask-shown{
+	background-color:#000;
+	opacity:.4;
+	filter:alpha(opacity=40);
+}

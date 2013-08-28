@@ -30,9 +30,21 @@ KISSY.use("overlay", function (S, Overlay) {
 
     $("#J_BtnSetData").on("click", function (e) {
         e.preventDefault();
-        pop();
-    })
+        //pop();
+      showpop();
+    });
 
+    function showpop(){
+      if(window != parent && window.parent.showPop){
+        window.parent.showPop($("#J_series")[0],window);
+      }else{
+        pop();
+      }
+    }
+    window.updateArea = function(content){
+      $("#J_series").val(content);
+    }
+    //废弃iframe中的pop方法
     function pop() {
         if (!window.pop) {
             var o = new Overlay.Dialog({
@@ -41,6 +53,7 @@ KISSY.use("overlay", function (S, Overlay) {
                 align: {
                     points: ['cc', 'cc']
                 },
+                mask:true,
                 elStyle: {
                     position: S.UA.ie == 6 ? "absolute" : "fixed"
                 },

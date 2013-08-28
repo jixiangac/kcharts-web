@@ -35,7 +35,7 @@ $chartType = isset($_GET['type']) ? $_GET['type'] : "linechart";
 			</div>
 			<div class="btn-container">
 				<a class="btn btn-blue" href="generator.php">生成demo及代码</a>
-				<a class="btn btn-blue" target="_blank" style="margin-left:14px;" href="generator.php">edit in jsfiddle</a>
+				<a class="btn btn-blue" target="_blank" style="margin-left:14px;" href="http://jsfiddle.net/NA6J4/embedded/result/">edit in jsfiddle</a>
 				<a class="btn" target="_blank" style="margin-left:14px;" href="http://gallery.kissyui.com/kcharts/1.1/guide/index.html?spm=0.0.0.0.WpVybg">查看文档</a>
 			</div>
 		</div>

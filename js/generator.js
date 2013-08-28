@@ -1,4 +1,4 @@
-(function (S) {
+KISSY.use("overlay",function(S,Overlay){
     var $ = S.all, anim = S.Anim;
     var $J_SelContent = $("#J_SelContent");
     $("#J_SelType").on("click", function (e) {
@@ -25,4 +25,32 @@
         $("#J_TxtType").text($(e.currentTarget).attr("data-type"));
         $J_SelContent.removeClass("isdown").hide().fadeOut();
     })
-})(KISSY);
+    window.getSerieData = function(){
+
+    }
+    window.showPop = function(bodyHTML,iframeWindow){
+        if (!window.pop) {
+            var o = new Overlay.Dialog({
+                width: 750,
+                height: 400,
+                align: {
+                    points: ['cc', 'cc']
+                },
+                mask:true,
+                elStyle: {
+                    position: S.UA.ie == 6 ? "absolute" : "fixed"
+                },
+                bodyContent: bodyHTML,
+                headerContent: "<div class='kc-title'>填充数据</div>"
+            });
+            window.pop = o;
+            o.on("hide",function(){
+              var areaContent = o.get("contentEl");
+              var area = S.DOM.get("#J_series",areaContent);
+              iframeWindow.updateArea(S.DOM.val(area));
+            });
+        }
+        window.pop.center();
+        window.pop.show();
+    }
+});

@@ -11,6 +11,7 @@
 <link rel="Shortcut Icon" href="favicon.ico" />
 <link rel="stylesheet" href="http://a.tbcdn.cn/p/global/1.0/global-min.css" />
 <link rel="stylesheet" href="css/index.css" />
+<link rel="stylesheet" href="generator/css/common.css" />
 <script src="http://a.tbcdn.cn/??s/kissy/1.3.0/kissy-min.js"></script>
 </head>
 <body>
