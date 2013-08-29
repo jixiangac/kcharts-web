@@ -60,7 +60,7 @@
 }
 
 .kc-lib .inner .siderbar li a.linechart i {
-    background: url('http://img02.taobaocdn.com/tps/i2/T1XSmnFfJfXXcrYH.B-191-309.png') no-repeat 0 -108px;
+    background: url('s.png') no-repeat 0 -108px;
 }
 
 .kc-lib .inner .siderbar li a.linechart:hover i, .kc-lib .inner .siderbar .cur a.linechart i {
@@ -68,7 +68,7 @@
 }
 
 .kc-lib .inner .siderbar li a.barchart i {
-    background: url('http://img02.taobaocdn.com/tps/i2/T1XSmnFfJfXXcrYH.B-191-309.png') no-repeat 0 7px;
+    background: url('s.png') no-repeat 0 7px;
 }
 
 .kc-lib .inner .siderbar li a.barchart:hover i ,.kc-lib .inner .siderbar .cur a.barchart i{
@@ -76,7 +76,7 @@
 }
 
 .kc-lib .inner .siderbar li a.piechart i {
-    background: url('http://img02.taobaocdn.com/tps/i2/T1XSmnFfJfXXcrYH.B-191-309.png') no-repeat 0 -171px;
+    background: url('s.png') no-repeat 0 -171px;
 }
 
 .kc-lib .inner .siderbar li a.piechart:hover i ,.kc-lib .inner .siderbar .cur a.piechart i{
@@ -84,7 +84,7 @@
 }
 
 .kc-lib .inner .siderbar li a.scatterchart i {
-    background: url('http://img02.taobaocdn.com/tps/i2/T1XSmnFfJfXXcrYH.B-191-309.png') no-repeat -51px -50px;
+    background: url('s.png') no-repeat -51px -50px;
 }
 
 .kc-lib .inner .siderbar li a.scatterchart:hover i,.kc-lib .inner .siderbar .cur a.scatterchart i {
@@ -92,11 +92,14 @@
 }
 
 .kc-lib .inner .siderbar li a.dashboard i {
-    background: url('http://img02.taobaocdn.com/tps/i2/T1XSmnFfJfXXcrYH.B-191-309.png') no-repeat -51px -227px;
+    background: url('s.png') no-repeat -51px -227px;
+}
+.kc-lib .inner .siderbar li a.dashboard:hover i {
+	background-position:-157px -227px	
 }
 
 .kc-lib .inner .siderbar li a.mapchart i {
-    background: url('http://img02.taobaocdn.com/tps/i2/T1XSmnFfJfXXcrYH.B-191-309.png') no-repeat 2px -276px;
+    background: url('s.png') no-repeat 2px -276px;
 }
 
 .kc-lib .inner .siderbar li a.mapchart:hover i,.kc-lib .inner .siderbar .cur a.mapchart i {
@@ -104,7 +107,7 @@
 }
 
 .kc-lib .inner .siderbar li a.sumdetailchart i {
-    background: url('http://img02.taobaocdn.com/tps/i2/T1XSmnFfJfXXcrYH.B-191-309.png') no-repeat 2px -222px;
+    background: url('s.png') no-repeat 2px -222px;
 }
 
 .kc-lib .inner .siderbar li a.sumdetailchart:hover i,.kc-lib .inner .siderbar .cur a.sumdetailchart i {
@@ -112,7 +115,7 @@
 }
 
 .kc-lib .inner .siderbar li a.timeline i {
-    background: url('http://img02.taobaocdn.com/tps/i2/T1XSmnFfJfXXcrYH.B-191-309.png') no-repeat -54px -177px;
+    background: url('s.png') no-repeat -54px -177px;
 }
 
 .kc-lib .inner .sidercontent {
