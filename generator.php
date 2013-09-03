@@ -1,5 +1,9 @@
 <?php
 include_once('header.php');
+$selected = $_GET['type'];
+if (empty($selected)) {
+    $selected = 'linechart';
+}
 ?>
     <style>
         .main-container {
@@ -166,7 +170,7 @@ include_once('header.php');
                 </div>
             </div>
             <iframe id="J_Frame" name="J_Frame" class="gen-inframe" scrolling="no" frameborder="0"
-                    src="generator/linechart.html"></iframe>
+                    src="generator/<?php echo $selected ?>.html"></iframe>
         </div>
     </div>
     <script type="text/javascript" src="js/generator.js"></script>
