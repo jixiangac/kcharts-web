@@ -4,6 +4,8 @@ $selected = $_GET['type'];
 if (empty($selected)) {
     $selected = 'linechart';
 }
+$texts = array("linechart" => "折线图", "barchart" => "柱状图", "linechart-stack" => "横向柱状图", "piechart" => "饼图", "scatterchart" => "散点图", "datetime" => "时间线");
+$selectedText = $texts[$selected];
 ?>
     <style>
         .main-container {
@@ -145,26 +147,34 @@ if (empty($selected)) {
             <div class="sel-container">
                 <a class="sel-type" id="J_SelType" href="#">
                     <i class="arrow arrow-up"></i>
-                    <span class="cur" id="J_TxtType">折线图</span>
+                    <span class="cur" id="J_TxtType"><?php echo $selectedText ?></span>
                     <i class="arrow arrow-up"></i>
                 </a>
 
                 <div class="sel-content bd-outer" id="J_SelContent" style="height: 0;">
                     <div class="bd-inner sel-content-inner">
                         <ul class="clearfix">
-                            <li class="icon-chart icon-linechart" data-type="折线图"><a class="cur"
-                                                                                     href="generator/linechart.html"
-                                                                                     target="J_Frame"></a></li>
-                            <li class="icon-chart icon-barchart" data-type="柱状图"><a href="generator/barchart.html"
-                                                                                    target="J_Frame"></a></li>
-                            <li class="icon-chart icon-barchart-stack" data-type="横向柱状图"><a
+                            <li class="icon-chart icon-linechart" data-type="折线图">
+                                <a <?php if ($selected == 'linechart') echo 'class="cur"' ?>
+                                    href="generator/linechart.html"
+                                    target="J_Frame"></a></li>
+                            <li class="icon-chart icon-barchart" data-type="柱状图">
+                                <a <?php if ($selected == 'barchart') echo 'class="cur"' ?>
+                                    href="generator/barchart.html"
+                                    target="J_Frame"></a></li>
+                            <li class="icon-chart icon-barchart-stack" data-type="横向柱状图">
+                                <a <?php if ($selected == 'barchart-stack') echo 'class="cur"' ?>
                                     href="generator/barchart-stack.html" target="J_Frame"></a></li>
-                            <li class="icon-chart icon-piechart" data-type="饼图"><a href="generator/piechart.html"
-                                                                                   target="J_Frame"></a></li>
-                            <li class="icon-chart icon-scatterchart" data-type="散点图"><a
+                            <li class="icon-chart icon-piechart" data-type="饼图">
+                                <a <?php if ($selected == 'piechart') echo 'class="cur"' ?>
+                                    href="generator/piechart.html"
+                                    target="J_Frame"></a></li>
+                            <li class="icon-chart icon-scatterchart" data-type="散点图">
+                                <a <?php if ($selected == 'scatterchart') echo 'class="cur"' ?>
                                     href="generator/scatterchart.html" target="J_Frame"></a></li>
-                            <li class="icon-chart icon-datetime" data-type="时间线"><a href="generator/datetime.html"
-                                                                                    target="J_Frame"></a></li>
+                            <li class="icon-chart icon-datetime" data-type="时间线">
+                                <a <?php if ($selected == 'datetime') echo 'class="cur"' ?>
+                                    href="generator/datetime.html" target="J_Frame"></a></li>
                         </ul>
                     </div>
                 </div>
