@@ -78,7 +78,7 @@
 
 .tab-nav {
     position: absolute;
-    margin: 495px 0px 0px 650px;
+    margin: 495px 0px 0px 45%;
     width: 70px;
     height: 22px;
     z-index: 2;
@@ -107,15 +107,74 @@
     position: relative;
     overflow: hidden;
     height: 540px;
-    width: 1265px;
+    width: 928px;
     margin: 0 auto;
 }
 
 .slides-container {
-    width: 1265px;
+    width: 928px;
     height: 540px;
     overflow: hidden;
     position: relative;
+}
+
+.tab-content .tab-pannel span {
+    width: 928px;
+    height: 540px;
+    display: inline-block;
+}
+
+.tab-content .tab-pannel .t1 {
+    background: url("http://gtms03.alicdn.com/tps/i3/T1V6iHFkdbXXXHQFok-1100-641.png");
+    background-size: 928px 540px;
+}
+
+.tab-content .tab-pannel .t2 {
+    background: url("http://gtms04.alicdn.com/tps/i4/T16yKHFm4cXXXHQFok-1100-641.png");
+    background-size: 928px 540px;
+}
+
+.tab-content .tab-pannel .t3 {
+    background: url("http://gtms02.alicdn.com/tps/i2/T1e5OqFf4hXXXHQFok-1100-641.png");
+    background-size: 928px 540px;
+}
+
+@media (min-width: 1280px) {
+    .slide-style {
+        position: relative;
+        overflow: hidden;
+        height: 540px;
+        width: 1265px;
+        margin: 0 auto;
+    }
+
+    .slides-container {
+        width: 1265px;
+        height: 540px;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .tab-content .tab-pannel span {
+        width: 1265px;
+        height: 540px;
+        display: inline-block;
+    }
+
+    .tab-content .tab-pannel .t1 {
+        background: url("http://img03.taobaocdn.com/tps/i3/T1bvKWXBhXXXa_hgjH-1500-641.png");
+        background-size: 1265px 540px;
+    }
+
+    .tab-content .tab-pannel .t2 {
+        background: url("http://img02.taobaocdn.com/tps/i2/T1t3R_FcdfXXa_hgjH-1500-641.png");
+        background-size: 1265px 540px;
+    }
+
+    .tab-content .tab-pannel .t3 {
+        background: url("http://img03.taobaocdn.com/tps/i3/T1b6GUXwXfXXa_hgjH-1500-641.png");
+        background-size: 1265px 540px;
+    }
 }
 
 .tab-content {
@@ -127,11 +186,6 @@
 
 .tab-content .tab-pannel {
     float: left;
-}
-
-.tab-content .tab-pannel img {
-    width: 1265px;
-    height: 540px;
 }
 
 .kc-menubar {

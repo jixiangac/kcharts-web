@@ -11,14 +11,14 @@ include_once('header.php');
     </ul>
     <div class="tab-content slides-container"><!--选项卡内容的父容器-->
         <div class="tab-pannel"><!--选项卡的每项的容器-->
-            <img src="http://img03.taobaocdn.com/tps/i3/T1bvKWXBhXXXa_hgjH-1500-641.png">
+            <span class="t1"></span>
         </div>
         <!--一般情况下，需要指定默认情况非首帧是否显示-->
         <div class="tab-pannel">
-            <img src="http://img02.taobaocdn.com/tps/i2/T1t3R_FcdfXXa_hgjH-1500-641.png">
+            <span class="t2"></span>
         </div>
         <div class="tab-pannel">
-            <img src="http://img03.taobaocdn.com/tps/i3/T1b6GUXwXfXXa_hgjH-1500-641.png">
+            <span  class="t3"></span>
         </div>
     </div>
     <a href="javascript:void(0);" hidefocus="true" class="b-prev"><i class="p"></i></a>
