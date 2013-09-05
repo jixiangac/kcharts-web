@@ -34,7 +34,15 @@ KISSY.use("gallery/kcharts/1.2/linechart/index",function(S,LineChart){
       renderTo:"#demo1",
       points:{
         attr:{
-          type:"auto"
+          "fill":"#fff",
+          "stroke-width":"1px",
+          "stroke":"{COLOR}"
+        },
+        hoverAttr:{
+          "fill":"#fff",
+          "stroke-width":"1px",
+          "stroke":"{COLOR}",
+          r:5
         }
       },
       yLabels:{
