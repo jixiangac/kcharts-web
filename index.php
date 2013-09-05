@@ -9,7 +9,7 @@ include_once('header.php');
         <li><a href="">2</a></li>
         <li><a href="">3</a></li>
     </ul>
-    <div class="tab-content"><!--选项卡内容的父容器-->
+    <div class="tab-content slides-container"><!--选项卡内容的父容器-->
         <div class="tab-pannel"><!--选项卡的每项的容器-->
             <img src="http://img03.taobaocdn.com/tps/i3/T1bvKWXBhXXXa_hgjH-1500-641.png">
         </div>
@@ -21,7 +21,7 @@ include_once('header.php');
             <img src="http://img03.taobaocdn.com/tps/i3/T1b6GUXwXfXXa_hgjH-1500-641.png">
         </div>
     </div>
-    <a href="javascript:void(0);" hidefocus="true" class="b-prev disable"><i class="p"></i></a>
+    <a href="javascript:void(0);" hidefocus="true" class="b-prev"><i class="p"></i></a>
     <a href="javascript:void(0);" hidefocus="true" class="b-next"><i class="n"></i></a>
 </div>
 

@@ -111,9 +111,14 @@
     margin: 0 auto;
 }
 
-.tab-content {
+.slides-container {
+    width: 1265px;
     height: 540px;
-    width: 4047px;
+    overflow: hidden;
+    position: relative;
+}
+
+.tab-content {
     position: absolute;
     left: 0px;
     top: 0px;
