@@ -88,11 +88,8 @@ include_once('header.php');
             </ul>
         </div>
         <div class="contect-wrapper">
-			<span class="ww-light ww-large" data-nick="KCharts%E4%BD%BF%E7%94%A8%E4%BA%A4%E6%B5%81"
-                  data-tnick="KCharts%E4%BD%BF%E7%94%A8%E4%BA%A4%E6%B5%81" data-encode="true" data-display="inline">
-<a class="contect-us" href="http://www.taobao.com/webww/?ver=1&touid=818302516&
-siteid=cntaobao&status=2&portalId=&
-gid=b2be10ade26ceb489a62d1b95eba0619&itemsId=" target="_blank"
+			<span class="ww-light ww-large">
+<a class="contect-us" href="http://amos.im.alisoft.com/msg.aw?v=2&uid=小柒&site=cntaobao&s=2&charset=utf-8" target="_blank"
    class="ww-inline ww-online">联系我们</a></span><span class="coperation"> 期待和你合作:)</span></div>
     </div>
 </div>
