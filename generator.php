@@ -1,9 +1,8 @@
 <?php
 include_once('header.php');
-$selected = $_GET['type'];
-if (empty($selected)) {
-    $selected = 'linechart';
-}
+
+$selected = isset($_GET['type'])?$_GET['type']:"linechart";
+
 $texts = array("linechart" => "折线图", "barchart" => "柱状图", "linechart-stack" => "横向柱状图", "piechart" => "饼图", "scatterchart" => "散点图", "datetime" => "时间线");
 $selectedText = $texts[$selected];
 ?>
