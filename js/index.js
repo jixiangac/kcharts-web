@@ -32,16 +32,13 @@
     (function () {
         S.use('gallery/slide/1.1/index', function (S, Slide) {
             var banner = new Slide('JSlide', {
+                effect: 'fade',
                 autoSlide: true,
-                effect: 'hSlide',
                 timeout: 3000,
-                speed: 700,
+                speed: 600,
                 eventType: 'mouseover',
-                triggerDelay: 400,
                 selectedClass: 'selected',
-                carousel: true,
-                hoverStop: true,
-                touchmove: true
+                hoverStop: true
             });
             $('.b-prev').on('click', function (e) {
                 e.halt();
