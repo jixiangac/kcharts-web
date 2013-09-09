@@ -43,8 +43,7 @@ include_once('header.php');
                     <div class="scroller">
                         <div class="ks-switchable-content" id="J_ChartIcons">
                             <div class="chart-icon linechart" charttype="linechart" chartname="折线图"
-                                 chartcontent="折线图可显示随X轴（多为时间）变化的连续数据，适用于显示在相等时间间隔下数据的趋势。"><a class="cur"
-                                                                                              href='javascript:void(0)'></a>
+                                 chartcontent="折线图可显示随X轴（多为时间）变化的连续数据，适用于显示在相等时间间隔下数据的趋势。"><a class="cur" href='javascript:void(0)'></a>
                             </div>
                             <div class="chart-icon barchart" charttype="barchart" chartname="柱状图"
                                  chartcontent="柱状图易于比较各组数据之间的差别。"><a href='javascript:void(0)'></a></div>
@@ -57,6 +56,10 @@ include_once('header.php');
                             </div>
                             <div class="chart-icon ratiochart" charttype="ratiochart" chartname="画报" chartcontent="画报">
                                 <a href='javascript:void(0)'></a></div>
+                            <?php /* ?>
+                            <div class="chart-icon radarchart" charttype="radarchart" chartname="雷达" chartcontent="雷达">
+                                <a href='javascript:void(0)'></a></div>
+                            <?php */ ?>
                             <div class="chart-icon mapchart last" charttype="mapchart" chartname="地图"
                                  chartcontent="地图用于展示数据在各个区域内的分布情况。"><a href='javascript:void(0)'></a></div>
                         </div>
