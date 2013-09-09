@@ -415,6 +415,16 @@ kc-main-content .inner .chart-list .last {
     background: url('http://img01.taobaocdn.com/tps/i1/T1_p5nFlpcXXckL6Z0-130-130.png') no-repeat;
 }
 
+.kc-main-content .inner .chart-list .ks-switchable-content .radarchart a {
+    background: url('http://gtms03.alicdn.com/tps/i3/T1ntaNFlFaXXckL6Z0-130-130.png') no-repeat;
+}
+
+.kc-main-content .inner .chart-list .ks-switchable-content .radarchart a:hover, .kc-main-content .inner .chart-list .ks-switchable-content .radarchart .cur {
+    background: url('http://gtms04.alicdn.com/tps/i4/T1aCCNFdxaXXckL6Z0-130-130.png') no-repeat;
+}
+
+
+
 .kc-banner .b-prev, .kc-banner .b-next {
     display: block;
     position: absolute;

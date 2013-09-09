@@ -114,6 +114,14 @@
     background-position: -110px -222px;
 }
 
+.kc-lib .inner .siderbar li a.radarchart i {
+    background: url('s.png') no-repeat -52px -108px;
+}
+
+.kc-lib .inner .siderbar li a.radarchart:hover i,.kc-lib .inner .siderbar .cur a.radarchart i {
+    background-position: -158px -108px;
+}
+
 .kc-lib .inner .siderbar li a.timeline i {
     background: url('s.png') no-repeat -54px -177px;
 }

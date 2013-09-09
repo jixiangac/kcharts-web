@@ -39,6 +39,10 @@ $exit = $chartType == 'dashboard' || $chartType == 'mapchart' || $chartType == '
                     echo "cur";
                 } ?>"><a class="sider-menu sumdetailchart" href="./lib.php?type=sumdetailchart"
                          chartType="sumdetailchart">画报<i></i></a></li>
+                <li class="<?php if ($chartType == "radarchart") {
+                    echo "cur";
+                } ?>"><a class="sider-menu radarchart" href="./lib.php?type=radarchart"
+                         chartType="radarchart">雷达图<i></i></a></li>
             </ul>
         </div>
         <div class="sidercontent ">
