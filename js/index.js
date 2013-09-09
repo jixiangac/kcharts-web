@@ -30,74 +30,25 @@
 
     //轮播
     (function () {
-        var oJSlide = $('#JSlide')[0];
-        var aBtn = $('#JSlide li');
-        var oDiv = $('#JSlide .tab-content');
-        var aDiv = $('#JSlide .tab-pannel');
-        var next = $('#JSlide .b-next'), prev = $('#JSlide .b-prev'), min = 0, max = aBtn.length;
-        var cWidth = aDiv[0].offsetWidth;
-        var now = 0, sel = 0;
-        for (var i = 0; i < aBtn.length; i++) {
-            aBtn[i].index = i;
-            aBtn[i].onclick = function () {
-                now = this.index;
-                sel = now;
-                tab();
-            }
-        }
-
-        function tab() {
-            if (now == min) {
-                prev.addClass('disable');
-                next.removeClass('disable');
-            } else if (now + 1 == max) {
-                next.addClass('disable');
-                prev.removeClass('disable');
-            } else {
-                prev.removeClass('disable');
-                next.removeClass('disable');
-            }
-            for (var i = 0; i < aBtn.length; i++) {
-                aBtn[i].className = '';
-            }
-            aBtn[now].className = 'selected';
-            oDiv.stop().animate({'left': -sel * cWidth}, 0.6, 'easeOutStrong');
-        }
-
-        prev.on('click', function (e) {
-            e.preventDefault();
-            if (!$(this).hasClass('disable')) {
-                now--;
-                sel--;
-                tab();
-            }
+        S.use('gallery/slide/1.1/index', function (S, Slide) {
+            var banner = new Slide('JSlide', {
+                effect: 'fade',
+                autoSlide: true,
+                timeout: 3000,
+                speed: 600,
+                eventType: 'mouseover',
+                selectedClass: 'selected',
+                hoverStop: true
+            });
+            $('.b-prev').on('click', function (e) {
+                e.halt();
+                banner.previous().stop().play();
+            });
+            $('.b-next').on('click', function (e) {
+                e.halt();
+                banner.next();
+            });
         });
-
-        next.on('click', function (e) {
-            e.preventDefault();
-            if (!$(this).hasClass('disable')) {
-                now++;
-                sel++;
-                tab();
-            }
-        })
-
-        function toNext() {
-            sel++;
-            now++;
-            if (sel == max) sel = now = 0;
-            tab();
-        }
-
-
-        var timer = setInterval(toNext, 3000);
-        oJSlide.onmouseover = function () {
-            clearInterval(timer);
-        }
-
-        oJSlide.onmouseout = function () {
-            timer = setInterval(toNext, 3000);
-        }
     })();
 
     KISSY.use("event,switchable", function (S, Event, Switchable) {
@@ -125,17 +76,17 @@
             $a.addClass("cur");
         });
 
-       $(".chart-icon",$("#J_ChartIcons")).on("click",function(e){
+        $(".chart-icon", $("#J_ChartIcons")).on("click", function (e) {
             var $tgt = $(e.currentTarget),
-                    $a  =$("a",$tgt),
-              name = $tgt.attr("chartname"),
-              content = $tgt.attr("chartcontent");
-          $J_ChartName.text(name);
-          $J_ChartContent.text(content);
-            $J_Iframe.attr("src","demos/"+$tgt.attr("charttype")+".html");
-            $("a",$("#J_ChartIcons")).removeClass("cur");
+                $a = $("a", $tgt),
+                name = $tgt.attr("chartname"),
+                content = $tgt.attr("chartcontent");
+            $J_ChartName.text(name);
+            $J_ChartContent.text(content);
+            $J_Iframe.attr("src", "demos/" + $tgt.attr("charttype") + ".html");
+            $("a", $("#J_ChartIcons")).removeClass("cur");
             $a.addClass("cur");
-       });
+        });
 
-});
+    });
 })(KISSY);

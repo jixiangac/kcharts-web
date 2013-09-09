@@ -242,7 +242,133 @@
            // do sth
          });
        }
-       pie1();
+       //pie1();
+       var cfg = {
+    "rpadding": 80,
+    "donut": true,
+    "autoRender": true,
+    "donutSize": 80,
+    "anim": {
+        "easing": "swing",
+        "duration": 800
+    },
+    "data": [
+        {
+            "label": "trident",
+            "data": [
+                {
+                    "data": 161446,
+                    "label": "ie8.0占15.7%",
+                    "text": "ie8.0"
+                },
+                {
+                    "data": 65004,
+                    "label": "ie6.0占6.3%",
+                    "text": "ie6.0"
+                },
+                {
+                    "data": 48868,
+                    "label": "ie7.0占4.7%",
+                    "text": "ie7.0"
+                },
+                {
+                    "data": 45612,
+                    "label": "ie9.0占4.4%",
+                    "text": "ie9.0"
+                },
+                {
+                    "data": 34512,
+                    "label": "ie10.0占3.4%",
+                    "text": "ie10.0"
+                },
+                {
+                    "data": 119501,
+                    "label": "其他占11.6%",
+                    "text": "其他"
+                }
+            ],
+            "color": "#00adef"
+        },
+        {
+            "label": "webkit",
+            "data": [
+                {
+                    "data": 293470,
+                    "label": "36021.0占28.5%",
+                    "text": "36021.0"
+                },
+                {
+                    "data": 40878,
+                    "label": "chrome26.0占4.0%",
+                    "text": "chrome26.0"
+                },
+                {
+                    "data": 39478,
+                    "label": "chrome24.0占3.8%",
+                    "text": "chrome24.0"
+                },
+                {
+                    "data": 29396,
+                    "label": "taobrowser20.0占2.9%",
+                    "text": "taobrowser20.0"
+                },
+                {
+                    "data": 24107,
+                    "label": "chrome17.0占2.3%",
+                    "text": "chrome17.0"
+                },
+                {
+                    "data": 113300,
+                    "label": "其他占11.0%",
+                    "text": "其他"
+                }
+            ],
+            "color": "#8cc63e"
+        },
+        {
+            "label": "gecko",
+            "data": [
+                {
+                    "data": 8790,
+                    "label": "firefox23.0占0.9%",
+                    "text": "firefox23.0"
+                },
+                {
+                    "data": 1257,
+                    "label": "firefox22.0占0.1%",
+                    "text": "firefox22.0"
+                },
+                {
+                    "data": 1014,
+                    "label": "firefox3.0占0.1%",
+                    "text": "firefox3.0"
+                },
+                {
+                    "data": 1822,
+                    "label": "其他占0.2%",
+                    "text": "其他"
+                }
+            ],
+            "color": "#f7941d"
+        },
+        {
+            "label": "presto",
+            "data": [
+                {
+                    "data": 580,
+                    "label": "opera12.16占0.1%",
+                    "text": "opera12.16"
+                }
+            ],
+            "color": "#ee217e"
+        }
+    ],
+    "title": {
+      content:"Browser Sharing Ratio"
+    },
+    renderTo:"#J_Pie1"
+};
+       var pie  = new Pie(cfg)
      })
     </script>
   </body>
