@@ -76,7 +76,6 @@ KISSY.add(function(S, LineChart) {
 	}
 
 	//获取数据
-
 	function getSeries(datas, txts) {
 		var obj = [];
 		for (var i in datas) {
@@ -129,14 +128,16 @@ KISSY.add(function(S, LineChart) {
 		var axis = [],
 			series, data2, texts = [];
 		var data = S.trim(data).replace(/\n/g, ",").split(",");
+
 		for (var i in data) {
 			data[i] = S.trim(data[i]);
 		}
 		var axisIndex = !isDataRow(data[data.length - 1].split(" ")) ? data.length - 1 : (!isDataRow(data[0].split(" ")) ? 0 : undefined);
 		//没有配置text则默认索引1,2,3
 		if (axisIndex !== undefined) {
-			axis = formatAry(data[axisIndex].split(" "));
+			axis = /\s+/g.test(data[axisIndex]) ? formatAry(data[axisIndex].split(" ")) : formatAry(data[axisIndex].split("\t"));
 		}
+
 		if (axisIndex === 0) {
 			data2 = data.splice(1, data.length - 1);
 		} else if (axisIndex === undefined) {
@@ -285,25 +286,17 @@ KISSY.add(function(S, LineChart) {
 		}
 	};
 
-
 	$("#J_btnGen").on("click", function() {
-
 		var config = genConfig(),
 			seriesData,
 			xaxisData;
-
 		seriesData = formatData($("#J_series").val());
 		xaxisData = {xAxis:{text:seriesData.axis}};
 		var cfg = S.mix(S.mix(config, seriesData), xaxisData);
 		var linechart = new LineChart(cfg);
-
 		$("#J_codePane").val(JsonUti.convertToString(cfg));
-
 	});
-
 	$("#J_btnGen").fire("click");
-
-
 }, {
 	requires: [
 		'gallery/kcharts/1.2/linechart/', 'gallery/colorPicker/1.0/', 'gallery/colorPicker/1.0/index.css'

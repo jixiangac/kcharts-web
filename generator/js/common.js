@@ -36,7 +36,7 @@ KISSY.use("overlay", function (S, Overlay) {
 
     function showpop(){
       if(window != parent && window.parent.showPop){
-        window.parent.showPop($("#J_series")[0],window);
+        window.parent.showPop(window);
       }else{
         pop();
       }
