@@ -53,6 +53,7 @@ KISSY.use("overlay", function (S, Overlay) {
                 align: {
                     points: ['cc', 'cc']
                 },
+                y:-200,
                 mask:true,
                 elStyle: {
                     position: S.UA.ie == 6 ? "absolute" : "fixed"
@@ -61,8 +62,9 @@ KISSY.use("overlay", function (S, Overlay) {
                 headerContent: "<div class='kc-title'>填充数据</div>"
             });
             window.pop = o;
+            o.render();
         }
-        window.pop.center();
+        //window.pop.center();
         window.pop.show();
     }
 });
