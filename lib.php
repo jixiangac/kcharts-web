@@ -3,7 +3,7 @@ include_once('header.php');
 ?>
 <?php
 $chartType = isset($_GET['type']) ? $_GET['type'] : "linechart";
-$exit = $chartType == 'dashboard' || $chartType == 'mapchart' || $chartType == 'sumdetailchart';
+$exit = $chartType == 'dashboard' || $chartType == 'mapchart' || $chartType == 'sumdetailchart' || $chartType == 'radarchart';
 ?>
 <link rel="stylesheet" href="css/lib.css"/>
 <div class="kc-lib">
