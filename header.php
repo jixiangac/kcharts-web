@@ -52,13 +52,13 @@ if(strstr($location, "index.php")){
 ?>
 	<li><a target="_blank" href="http://gallery.kissyui.com/kcharts/1.1/guide/index.html?spm=0.0.0.0.WpVybg">文档</a></li>
 <?php 
-	// }if(strstr($location, "aboutus.php")){
+	}if(strstr($location, "utils.php")){
 ?>
-<!-- <li class="cur"><a href="aboutus.php">关于我们</a></li> -->
+<li class="cur"><a href="utils.php">工具</a></li>
 <?php	
-// }else{
+}else{
 ?>
-<!-- <li><a href="aboutus.php">关于我们</a></li> -->
+<li><a href="utils.php">工具</a></li>
 <?php	
 }
 ?>
