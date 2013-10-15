@@ -46,11 +46,11 @@ if(strstr($location, "index.php")){
 <?php 
 }if(strstr($location, "doc.php")){
 ?>	
-	<li class="cur"><a target="_blank" href="http://gallery.kissyui.com/kcharts/1.1/guide/index.html?spm=0.0.0.0.WpVybg">文档</a></li>
+	<li class="cur"><a target="_blank" href="http://gallery.kissyui.com/kcharts/1.2/guide/index.html?spm=0.0.0.0.WpVybg">文档</a></li>
 <?php	
 }else{
 ?>
-	<li><a target="_blank" href="http://gallery.kissyui.com/kcharts/1.1/guide/index.html?spm=0.0.0.0.WpVybg">文档</a></li>
+	<li><a target="_blank" href="http://gallery.kissyui.com/kcharts/1.2/guide/index.html?spm=0.0.0.0.WpVybg">文档</a></li>
 <?php 
 	}if(strstr($location, "utils.php")){
 ?>
