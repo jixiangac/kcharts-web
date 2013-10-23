@@ -8,7 +8,7 @@
 <div style="width:1000px;margin:20px auto;border:1px solid #ccc;border-radius:5px 5px 5px 5px;">
 <pre><code>
 
-	<? echo htmlspecialchars($page['code']); ?>
+	<?php echo htmlspecialchars($page['code']); ?>
 
 
 
