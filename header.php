@@ -21,12 +21,12 @@
 <div class="kc-header">
 	<div class="inner">
 		<ul class="nav" id="nav">
-			<li <? if(strstr($location, "index.php")){ ?>class="cur" <? } ?> ><a href="index.php">首页</a></li>
-			<li <? if(strstr($location, "lib.php")){ ?>class="cur" <? } ?>><a href="lib.php">图表库</a></li>
-			<li <? if(strstr($location, "demo.php")){ ?>class="cur" <? } ?>><a href="demo.php">Demo中心</a></li>
-			<li <? if(strstr($location, "generator.php")){ ?>class="cur" <? } ?>><a href="generator.php">生成器</a></li>
+			<li <?php if(strstr($location, "index.php")){ ?>class="cur" <?php } ?> ><a href="index.php">首页</a></li>
+			<li <?php if(strstr($location, "lib.php")){ ?>class="cur" <?php } ?>><a href="lib.php">图表库</a></li>
+			<li <?php if(strstr($location, "demo.php")){ ?>class="cur" <?php } ?>><a href="demo.php">Demo中心</a></li>
+			<li <?php if(strstr($location, "generator.php")){ ?>class="cur" <?php } ?>><a href="generator.php">生成器</a></li>
 			<li><a target="_blank" href="http://gallery.kissyui.com/kcharts/1.2/guide/index.html?spm=0.0.0.0.WpVybg">文档</a></li>
-			<li <? if(strstr($location, "utils.php")){ ?>class="cur" <? } ?>><a href="utils.php">工具</a></li>
+			<li <?php if(strstr($location, "utils.php")){ ?>class="cur" <?php } ?>><a href="utils.php">工具</a></li>
 			<li><a href="https://github.com/kissygalleryteam/kcharts" target="_blank">github</a></li>
 			<li class="box"></li>
 		</ul>

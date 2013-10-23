@@ -1,4 +1,4 @@
-<?php 
+<?php
 	include_once('header.php');
 	include_once('service/getDemoList.php');
 ?>
@@ -73,21 +73,21 @@
 		<a class="go-upload"  href="upload.php">上传demo&gt;</a>
 		<h1 class="cat-name">分类</h1>
 		<ul class="cat-list">
-			<li<? if($catname == ""){ ?> class="cur" <? } ?> ><a href="demo.php">全部</a></li>
-			<li<? if($catname == "折线图"){ ?> class="cur" <? } ?>><a href="demo.php?cat=折线图">折线图</a></li>
-			<li<? if($catname == "柱状图"){ ?> class="cur" <? } ?>><a href="demo.php?cat=柱状图">柱状图</a></li>
-			<li<? if($catname == "饼图"){ ?> class="cur" <? } ?>><a href="demo.php?cat=饼图">饼图</a></li>
-			<li<? if($catname == "其他"){ ?> class="cur" <? } ?>><a href="demo.php?cat=其他">其他</a></li>
+			<li<?php if($catname == ""){ ?> class="cur" <?php } ?> ><a href="demo.php">全部</a></li>
+			<li<?php if($catname == "折线图"){ ?> class="cur" <?php } ?>><a href="demo.php?cat=折线图">折线图</a></li>
+			<li<?php if($catname == "柱状图"){ ?> class="cur" <?php } ?>><a href="demo.php?cat=柱状图">柱状图</a></li>
+			<li<?php if($catname == "饼图"){ ?> class="cur" <?php } ?>><a href="demo.php?cat=饼图">饼图</a></li>
+			<li<?php if($catname == "其他"){ ?> class="cur" <?php } ?>><a href="demo.php?cat=其他">其他</a></li>
 		</ul>
 	</div>
 	<div class="list-wrapper">
 		<table>
 			<?php foreach($demolist as $item){ ?>
 			<tr>
-				<td><a class="title" href="demo_page.php?id=<? echo $item['id'];?>" target="_blank">[<? echo $item['catname'];?>] <? echo $item['title'];?></a></td>
-				<td><span class="date"><? echo $item['time'];?></span></td>
-				<td><a href="demo_page.php?id=<? echo $item['id'];?>" target="_blank">查看demo</a> [<a href="code.php?id=<? echo $item['id'];?>" target="_blank">查看源码</a>]</td>
-				<td><? echo $item['nick'];?></td>
+				<td><a class="title" href="demo_page.php?id=<?php echo $item['id'];?>" target="_blank">[<?php echo $item['catname'];?>] <?php echo $item['title'];?></a></td>
+				<td><span class="date"><?php echo $item['time'];?></span></td>
+				<td><a href="demo_page.php?id=<?php echo $item['id'];?>" target="_blank">查看demo</a> [<a href="code.php?id=<?php echo $item['id'];?>" target="_blank">查看源码</a>]</td>
+				<td><?php echo $item['nick'];?></td>
 			</tr>
 			<?php } ?>
 		</table>
@@ -97,8 +97,8 @@
 	</div>
 </div>
 
-<input type="hidden" value="<? echo $page; ?>" id="H_CurPage">
-<input type="hidden" value="<? echo $totalPage; ?>" id="H_TotalPage">
+<input type="hidden" value="<?php echo $page; ?>" id="H_CurPage">
+<input type="hidden" value="<?php echo $totalPage; ?>" id="H_TotalPage">
 <script>
 (function(S){
 	var $ = S.all;
@@ -128,7 +128,7 @@
             },
 			autoRender:true,
 			onclick:function(page){
-				location.href="demo.php?page="+page+"&cat=<? echo $catname; ?>";
+				location.href="demo.php?page="+page+"&cat=<?php echo $catname; ?>";
 			}
 		});
 	});
