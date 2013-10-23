@@ -14,57 +14,22 @@
 <link rel="stylesheet" href="generator/css/common.css" />
 <script src="http://a.tbcdn.cn/??s/kissy/1.3.0/kissy-min.js"></script>
 </head>
+<?php
+	$location = $_SERVER['PHP_SELF'];
+?>
 <body>
 <div class="kc-header">
 	<div class="inner">
 		<ul class="nav" id="nav">
-<?php
-$location = $_SERVER['PHP_SELF'];
-if(strstr($location, "index.php")){
-?>
-	<li class="cur"	><a href="index.php">首页</a></li>
-<?php	
-}else{
-?>
-	<li><a href="index.php">首页</a></li>
-<?php 
-}if(strstr($location, "lib.php")){
-?>	
-	<li class="cur"><a href="lib.php">图表库</a></li>
-<?php	
-}else{
-?>
-	<li><a href="lib.php">图表库</a></li>
-<?php 
-}if(strstr($location, "generator.php")){
-?>	
-	<li class="cur"><a href="generator.php">生成器</a></li>
-<?php	
-}else{
-?>
-	<li><a href="generator.php">生成器</a></li>
-<?php 
-}if(strstr($location, "doc.php")){
-?>	
-	<li class="cur"><a target="_blank" href="http://gallery.kissyui.com/kcharts/1.2/guide/index.html?spm=0.0.0.0.WpVybg">文档</a></li>
-<?php	
-}else{
-?>
-	<li><a target="_blank" href="http://gallery.kissyui.com/kcharts/1.2/guide/index.html?spm=0.0.0.0.WpVybg">文档</a></li>
-<?php 
-	}if(strstr($location, "utils.php")){
-?>
-<li class="cur"><a href="utils.php">工具</a></li>
-<?php	
-}else{
-?>
-<li><a href="utils.php">工具</a></li>
-<?php	
-}
-?>
-<li><a href="https://github.com/kissygalleryteam/kcharts" target="_blank">github</a></li>
-<li class="box"></li>
-</ul>
+			<li <? if(strstr($location, "index.php")){ ?>class="cur" <? } ?> ><a href="index.php">首页</a></li>
+			<li <? if(strstr($location, "lib.php")){ ?>class="cur" <? } ?>><a href="lib.php">图表库</a></li>
+			<li <? if(strstr($location, "demo.php")){ ?>class="cur" <? } ?>><a href="demo.php">Demo中心</a></li>
+			<li <? if(strstr($location, "generator.php")){ ?>class="cur" <? } ?>><a href="generator.php">生成器</a></li>
+			<li><a target="_blank" href="http://gallery.kissyui.com/kcharts/1.2/guide/index.html?spm=0.0.0.0.WpVybg">文档</a></li>
+			<li <? if(strstr($location, "utils.php")){ ?>class="cur" <? } ?>><a href="utils.php">工具</a></li>
+			<li><a href="https://github.com/kissygalleryteam/kcharts" target="_blank">github</a></li>
+			<li class="box"></li>
+		</ul>
 	</div>
 
 </div>
