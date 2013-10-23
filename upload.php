@@ -57,12 +57,12 @@ table td .nick{width: 100px;}
 			</select>
 		</td>
 	</tr>
-	<tr>
+	<!-- <tr>
 		<td>demo链接：</td>
 		<td>
 			<input type="text" class="txt link"  value="" name="link" >
 		</td>
-	</tr>
+	</tr> -->
 	<tr>
 		<td>源码：</td>
 		<td>
