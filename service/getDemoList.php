@@ -22,7 +22,6 @@ include_once('req.php');
 		$totalPage = ceil($totalNum/$pagesize);
 		$page = ($page <= 0 || $page > $totalPage) ? 1 : $page;
 		$result = mysql_query("SELECT * FROM tb_demoupload ".$wheresql." order by time desc limit ".($page-1) * $pagesize.",".$pagesize);
-		echo "SELECT * FROM tb_demoupload ".$wheresql."  limit ".($page-1) * $pagesize.",".$pagesize;
 		$list = array();
 		while($row = mysql_fetch_array($result,MYSQL_ASSOC)){
 			array_push($list, $row);
