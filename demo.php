@@ -128,7 +128,9 @@
             },
 			autoRender:true,
 			onclick:function(page){
-				location.href="demo.php?page="+page+"&cat=<?php echo $catname; ?>";
+				if(!isNaN(page) && page > 0 && page <= $("#H_TotalPage").val()){
+					location.href="demo.php?page="+page+"&cat=<?php echo $catname; ?>";
+				}
 			}
 		});
 	});
