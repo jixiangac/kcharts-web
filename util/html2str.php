@@ -89,9 +89,16 @@ textarea{
 			var tmp = input[i].replace(/^\s+/g, function($1, $2) {
 				return $1 + "KC_SPLIT";
 			}).split("KC_SPLIT")
+
+			if(tmp.length > 1){
 			os.push(tmp[0]);
 			os.push(dot);
-			os.push(tmp[1].replace(/^\s+/g, ""))
+			os.push(tmp[1] && tmp[1].replace(/^\s+/g, ""))
+		}else{
+			os.push(tmp[0]);
+		}
+
+			
 			i == len - 1 && len > 1  ? os.push(dot + "\n") : os.push(dot + "+\n");
 		}
 		$("#output").val(os.join(""))

@@ -8,7 +8,7 @@ $con = mysql_connect("localhost:3306","root","Taobao1234");
 	 }
 	//选择当前数据库
 	mysql_select_db("kcharts", $con);
-	// header("content-type:text/html; charset=utf-8");
-	// mysql_query("set names utf8");
+	header("content-type:text/html; charset=utf-8");
+	mysql_query("set names utf8");
 
 ?>
