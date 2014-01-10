@@ -1,0 +1,115 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>kcharts example list</title>
+	<link rel="stylesheet" charset="utf-8" href="http://g.tbcdn.cn/kissy/k/1.4.1/css/dpl/base-min.css">
+    <link rel="stylesheet" href="assets/css/kcharts-font.css">
+    <!--[if IE 7]>
+    <link rel="stylesheet" href="assets/csst/kcharts-font-ie7.css">
+    <![endif]-->
+    <style>
+     /******************** left side menu ********************/
+     .k-widget-groups{position:fixed;margin-right:50px;background-color:#191818;width:200px;height:100%;}
+     .k-widget-ul{list-style:none;padding-left:0;margin:0;}
+     .k-widget-group-h{font-size:20px;color:#fff;border-bottom:1px solid #444;padding:0 0 8px 5px;margin:10px 0 0 0;}
+     .k-widget-li{font-size:18px;padding:5px 0 5px 10px;}
+     .k-widget-li:hover{background-color:#333;}
+     .k-widget-li.k-widget-li-active{background-color:#1f8dd6;}
+     .k-widget-li a{color:#999;}
+     .k-widget-li-active a{color:#fff;}
+     /******************** icon 菜单 ********************/
+     .k-widget-menu{text-align:right;font-size:18px;position:fixed;right:50px;top:5px;}
+     .k-widget-menu .icon-menu{cursor:pointer;}
+     #toggle{color:#000;padding:1px 1px 5px 1px;position:relative;z-index:5;background-color:#fff;}
+     .k-widget-menu ul{text-align:left;list-style:none;border:1px solid #ccc;padding:5px 20px;box-shadow:0 0 2px #ccc;margin:0;background-color:#fff;}
+     .k-widget-menu ul a{color:#000;}
+     .k-widget-menu ul{visibility:hidden;}
+     .k-widget-menu:hover ul{visibility:visible;}
+     .k-widget-menu:hover #toggle{border:1px solid #ccc;border-bottom:0;padding:0 0 5px 0;}
+     /******************** right side demo ********************/
+     /* .k-widget-menu{text-align:right;font-size:18px;position:fixed;right:50px;top:5px;}
+     .k-widget-menu .icon-menu{cursor:pointer;} */
+
+     .k-widget-demos{margin:0 80px 0 0;padding:50px 0 0 230px;}
+     .k-widget-demo-link{border:1px solid #ccc;border-radius:3px;display:block;float:left;margin:5px;padding:3px;}
+     .k-widget-demo-image{width:300px;}
+    </style>
+  </head>
+  <body>
+    <div class="k-widget-groups ks-clear">
+      <div class="k-widget-group">
+        <h1 class="k-widget-group-h"><i class="icon-chart-line"></i>线图</h1>
+        <ul class="k-widget-ul">
+          <li class="k-widget-li">
+            <a href="#">linechart</a>
+          </li>
+          <li class="k-widget-li k-widget-li-active-">
+            <a href="#">datetime</a>
+          </li>
+        </ul>
+      </div>
+      
+      <div class="k-widget-group">
+        <h1 class="k-widget-group-h"><i class="icon-chart-bar"></i>柱状图</h1>
+        <ul class="k-widget-ul">
+          <li class="k-widget-li">
+            <a href="#">只有一列</a>
+          </li>
+          <li class="k-widget-li k-widget-li-active">
+            <a href="#">多列柱状图</a>
+          </li>
+          <li class="k-widget-li">
+            <a href="#">颜色配置</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="k-widget-group">
+        <h1 class="k-widget-group-h"><i class="icon-chart-pie"></i>饼图</h1>
+        <ul class="k-widget-ul">
+          <li class="k-widget-li">
+            <a href="#">简单饼图</a>
+          </li>
+          <li class="k-widget-li">
+            <a href="#">面包圈图</a>
+          </li>
+          <li class="k-widget-li">
+            <a href="#">嵌套的饼图</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="k-widget-demos">
+      
+      <div class="k-widget-demo ks-clear">
+        <a class="k-widget-demo-link" href="#" target="blank">
+          <img class="k-widget-demo-image" src="http://nvd3.org/img/line.png"/>
+        </a>
+        <a class="k-widget-demo-link" href="#" target="blank">
+          <img class="k-widget-demo-image" src="http://nvd3.org/img/line.png"/>
+        </a>
+        <a class="k-widget-demo-link" href="#" target="blank">
+          <img class="k-widget-demo-image" src="http://nvd3.org/img/line.png"/>
+        </a>
+        <a class="k-widget-demo-link" href="#" target="blank">
+          <img class="k-widget-demo-image" src="http://nvd3.org/img/line.png"/>
+        </a>
+      </div>
+    </div>
+
+    <div class="k-widget-menu">
+      <a id="toggle" href="#"><i class="icon-menu"></i></a>
+      <ul>
+        <li>
+          <a href="#introduction">Introduction</a></li>
+          <li>
+            <a href="#application">Application</a>
+          </li>
+      </ul>
+    </div>    
+
+    <script charset="utf-8" src="http://g.tbcdn.cn/kissy/k/1.4.0/seed.js"></script>
+  </body>
+</html>

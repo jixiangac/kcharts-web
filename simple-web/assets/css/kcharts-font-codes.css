@@ -1,0 +1,8 @@
+
+.icon-list:before { content: '\e800'; } /* '' */
+.icon-chart-pie:before { content: '\e805'; } /* '' */
+.icon-chart-line:before { content: '\e804'; } /* '' */
+.icon-chart-bar:before { content: '\e803'; } /* '' */
+.icon-list-1:before { content: '\e801'; } /* '' */
+.icon-menu:before { content: '\e806'; } /* '' */
+.icon-th-list:before { content: '\e802'; } /* '' */
