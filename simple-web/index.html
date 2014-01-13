@@ -29,8 +29,21 @@
      .k-button{padding:5px 15px;background-color:#0078e7;border-radius:3px;}
      .k-button:hover{background-image:linear-gradient(transparent,rgba(0,0,0,.05) 40%,rgba(0,0,0,.1));}
 
-     #top{height:100%;}
-    
+     /******************** 首页过度动画 ********************/
+     #top{
+       height:100%;
+     }
+     .top{
+       opacity:0.2;
+     }
+     .top-loaded{
+       opacity:0.8;
+       -moz-transition: opacity 0.8s ease-in,color 0.3s ease-out;
+       -webkit-transition: opacity 0.8s ease-in,color 0.3s ease-out;
+       -o-transition: opacity 0.8s ease-in,color 0.3s ease-out;
+       transition: opacity 0.8s ease-in,color 0.3s ease-out;
+     }
+
      html,body{margin:0;height:100%;}
 
      section:not(#top){
@@ -116,8 +129,9 @@
        left:0;
        height:64px;width:100%;
        background:url(assets/img/arrow-down-64.png) 50% 50% no-repeat;
-
        opacity:0;
+     }
+     .k-arrow-down-anim{
        -webkit-animation-name: arrowdown;
        -webkit-animation-duration: 3000ms;
        -webkit-animation-delay: 3000ms;
@@ -136,7 +150,7 @@
     </style>
   </head>
   <body>
-    <section id="top">
+    <section id="top" class="top">
       <div class="heading">
         <div class="logo">
           KCharts
@@ -216,9 +230,45 @@
     </div>
     
     <!-- 向下的指示箭头 -->
-    <div class="k-arrow-down">
+    <div id="J_ArrowDir" class="k-arrow-down">
     </div>
-    <!-- <script charset="utf-8" src="http://g.tbcdn.cn/kissy/k/1.4.0/seed-min.js"></script>
-    <script type="text/javascript" src="assets/js/demo.js"></script> -->
+    <script charset="utf-8" src="http://g.tbcdn.cn/kissy/k/1.4.0/seed-min.js"></script>
+    <script type="text/javascript" src="assets/js/demo.js"></script>
+    <script>
+     KISSY.use("node,cookie,event,dom",function(S,Node,Cookie,E,D){
+       //==================== 首页渐入 ====================
+       var $top = S.one("#top");
+       $top.addClass("top-loaded");
+       
+       //==================== 箭头指示 ====================
+       // 滚动条是否在最上面
+       function isAtTop(){
+         return S.one(window).scrollTop() === 0;
+       }
+       // 只有没有往下滚动过才提示向下滚动
+       function setArrowDirection(){
+         var name = "arrow_directed";
+         var val = "1";
+         if(Cookie.get(name) === val){
+           return;
+         }
+         
+         if(isAtTop()){
+           S.one("#J_ArrowDir").addClass("k-arrow-down-anim");
+         }
+         // 调用过后设置cookie，下次不用再指示了，烦人！
+         // Cookie 10 day 失效
+         Cookie.set(name,val,10);
+       }
+       
+       // 若滚动了，就不再箭头提示
+       E.on(window,"scroll",function(){
+         S.one("#J_ArrowDir").removeClass("k-arrow-down-anim");
+         E.detach(window,"scroll");
+       });
+       // 开启滚动提示
+       setArrowDirection();
+     });
+    </script>
   </body>
 </html>

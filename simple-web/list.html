@@ -18,21 +18,35 @@
      .k-widget-li.k-widget-li-active{background-color:#1f8dd6;}
      .k-widget-li a{color:#999;}
      .k-widget-li-active a{color:#fff;}
+
      /******************** icon 菜单 ********************/
      .k-widget-menu{text-align:right;font-size:18px;position:fixed;right:50px;top:5px;}
      .k-widget-menu .icon-menu{cursor:pointer;}
-     #toggle{color:#000;padding:1px 1px 5px 1px;position:relative;z-index:5;background-color:#fff;}
-     .k-widget-menu ul{text-align:left;list-style:none;border:1px solid #ccc;padding:5px 20px;box-shadow:0 0 2px #ccc;margin:0;background-color:#fff;}
+     #toggle,.k-widget-menu ul{background-color:#fff;}
+     #toggle{color:#000;padding:1px 1px 5px 1px;position:relative;z-index:5;}
+     .k-widget-menu ul{text-align:left;list-style:none;border:1px solid #ccc;padding:5px 20px;box-shadow:0 0 2px #ccc;margin:0;}
      .k-widget-menu ul a{color:#000;}
+     .k-widget-menu ul a:hover{color:#06c;}
      .k-widget-menu ul{visibility:hidden;}
      .k-widget-menu:hover ul{visibility:visible;}
      .k-widget-menu:hover #toggle{border:1px solid #ccc;border-bottom:0;padding:0 0 5px 0;}
+
      /******************** right side demo ********************/
      /* .k-widget-menu{text-align:right;font-size:18px;position:fixed;right:50px;top:5px;}
      .k-widget-menu .icon-menu{cursor:pointer;} */
 
      .k-widget-demos{margin:0 80px 0 0;padding:50px 0 0 230px;}
-     .k-widget-demo-link{border:1px solid #ccc;border-radius:3px;display:block;float:left;margin:5px;padding:3px;}
+     .k-widget-demo-link{
+       border:1px solid #ccc;border-radius:3px;display:block;float:left;margin:5px;padding:3px;
+       box-shadow:0 0 0 #ccc;
+     }
+     .k-widget-demo-link:hover{
+       box-shadow:0 0 10px #666;
+       -moz-transition: all .4s ease-in,color 0.3s ease-out;
+       -webkit-transition: all .4s ease-in,color 0.3s ease-out;
+       -o-transition: all .4s ease-in,color 0.3s ease-out;
+       transition: all .4s ease-in,color 0.3s ease-out;
+     }
      .k-widget-demo-image{width:300px;}
     </style>
   </head>
@@ -103,13 +117,23 @@
       <a id="toggle" href="#"><i class="icon-menu"></i></a>
       <ul>
         <li>
-          <a href="#introduction">Introduction</a></li>
-          <li>
-            <a href="#application">Application</a>
-          </li>
+          <a href="#introduction">简介</a>
+        </li>
+        <li>
+          <a href="#linechart">线图</a>
+        </li>
+        <li>
+          <a href="list.html" target="_blank">更多DEMO</a>
+        </li>
+        <li>
+          <a href="http://gallery.kissyui.com/kcharts/1.3/guide#组件文档" target="_blank">组件文档</a>
+        </li>
+        <li>
+          <a href="https://github.com/kissygalleryteam/kcharts" target="_blank">Github Source</a>
+        </li>
       </ul>
-    </div>    
+    </div>
 
-    <script charset="utf-8" src="http://g.tbcdn.cn/kissy/k/1.4.0/seed.js"></script>
+    <script charset="utf-8" src="http://g.tbcdn.cn/kissy/k/1.4.0/seed-min.js"></script>
   </body>
 </html>
