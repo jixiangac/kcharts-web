@@ -17,10 +17,12 @@
      #toggle{color:#000;padding:1px 1px 5px 1px;position:relative;z-index:5;background-color:#fff;}
      .k-widget-menu ul{text-align:left;list-style:none;border:1px solid #ccc;padding:5px 20px;box-shadow:0 0 2px #ccc;margin:0;}
      .k-widget-menu ul a{color:#000;}
+     .k-widget-menu ul a:hover{color:#06c;}
      .k-widget-menu ul{visibility:hidden;}
      .k-widget-menu:hover ul{visibility:visible;}
      .k-widget-menu:hover #toggle{border:1px solid #ccc;border-bottom:0;padding:0 0 5px 0;}
      
+     /******************** else ********************/
      .kissy-key-wd{color:#06c;}
      .k-button,.k-button:hover,.k-button:visited{color:#fff;}
      .k-button{padding:5px 15px;background-color:#0078e7;border-radius:3px;}
@@ -48,6 +50,88 @@
 
      .content{text-align:left;max-width:750px;margin:0 auto;}
      .content p{font-size:14px;}
+     
+     /******************** 主题选择 ********************/
+     .k-theme-con{position:fixed;right:20px;bottom:50px;}
+     .k-theme-icon{
+       margin-left:30px;width:26px;height:26px;background:url(assets/img/colorpicker.gif) 0 0 no-repeat;cursor:pointer;
+       /* -webkit-animation-name: rotate;
+       -webkit-animation-duration: 5000ms;
+       -webkit-animation-iteration-count: infinite;
+       -webkit-animation-direction: normal; */
+     }
+     @-webkit-keyframes rotate{
+       0%   { 
+             -webkit-transform: rotate(0deg);
+            }
+       100% { 
+             -webkit-transform: rotate(360deg);
+            }
+     }     
+     .k-themes-ul,
+     .k-theme-arrow{
+       opacity:0;
+       position:relative;
+     }
+     .k-themes-ul{
+       border:1px solid silver;width:80px;list-style:none;padding:0;margin:0;border-radius:2px;
+
+       /* for animation */
+       top:-100px;
+     }
+     .k-theme-con:hover .k-themes-ul,
+     .k-theme-con:hover .k-theme-arrow{
+       -webkit-animation-name: pin;
+       -webkit-animation-duration: 300ms;
+       top:15px;
+       opacity:1;
+     }
+     .k-themes-ul li{cursor:pointer;}
+     .k-themes-ul li:hover{background-color:#eee;}
+     .k-themes-ul li:not(:last-child){border-bottom:1px solid #bbb;}
+     .k-theme-arrow{
+       border:8px solid #ccc;border-right-color:transparent;border-bottom-color:transparent;border-left-color:transparent;margin-left:34px;
+       display:inline-block;
+       font-size:0;line-height:0;height:0;top:-100px;
+     }
+     .k-themes-ul .icon-check{color:#bbb;}
+     .k-themes-li-check .icon-check{color:#06c;}
+     .k-themes-ul li:hover .icon-check{color:#06c;}
+
+     @-webkit-keyframes pin{
+       0%   { 
+             opacity: 0; 
+             top:-100px;
+            }
+       100% { 
+             opacity: 1; 
+             top: 15px;
+            }
+     }     
+     /******************** 提示箭头向下滑动 ********************/
+     .k-arrow-down{
+       position:fixed;
+       bottom:10px;
+       left:0;
+       height:64px;width:100%;
+       background:url(assets/img/arrow-down-64.png) 50% 50% no-repeat;
+
+       opacity:0;
+       -webkit-animation-name: arrowdown;
+       -webkit-animation-duration: 3000ms;
+       -webkit-animation-delay: 3000ms;
+       -webkit-animation-iteration-count: 2;
+     }
+     @-webkit-keyframes arrowdown{
+       0%   { 
+             bottom:10px;
+             opacity:1;
+            }
+       100% { 
+             bottom: -70px;
+             opacity:0;
+            }
+     }     
     </style>
   </head>
   <body>
@@ -63,16 +147,20 @@
       </div>
     </section>
 
-    <section>
+    <section id="introduction">
       <div class="content">
         <h1>简介</h1>
         <p>
-          KCharts 是一个模块化的，基于Kissy 、Raphaël的图形组件库
+        KCharts 是一个模块化的，基于Kissy 、Raphaël的图形组件库，支持PC上所有现代
+        浏览器，以及IE6/IE7/IE8。对KISSY的支持包括KISSY 1.2/1.3.x/1.4.x 。</p>
+        
+        <p>
+        方便的换肤支持，请点击右下角的换肤icon进行换肤！
         </p>
       </div>
     </section>
 
-    <section>
+    <section id="linechart">
       <div class="content">
         <h1>线图组件</h1>
         <div id="J_Line1" class="kchart-container">
@@ -85,8 +173,9 @@
       <div class="content">
         <h1>简介</h1>
         <p>
-          KCharts 是一个模块化的，基于Kissy 、Raphaël的图形组件库
-        </p>
+        KCharts 是一个模块化的，基于Kissy 、Raphaël的图形组件库，支持PC上所有现代
+        浏览器，以及IE6/IE7/IE8。对KISSY的支持包括KISSY 1.2/1.3.x/1.4.x 。</p>
+        
       </div>
     </section>
 
@@ -94,14 +183,41 @@
       <a id="toggle" href="#"><i class="icon-menu"></i></a>
       <ul>
         <li>
-          <a href="#introduction">Introduction</a></li>
-          <li>
-            <a href="#application">Application</a>
-          </li>
+          <a href="#introduction">简介</a>
+        </li>
+        <li>
+          <a href="#linechart">线图</a>
+        </li>
+        <li>
+          <a href="list.html" target="_blank">更多DEMO</a>
+        </li>
+        <li>
+          <a href="http://gallery.kissyui.com/kcharts/1.3/guide#组件文档" target="_blank">组件文档</a>
+        </li>
+        <li>
+          <a href="https://github.com/kissygalleryteam/kcharts" target="_blank">Github Source</a>
+        </li>
       </ul>
     </div>
 
-    <script charset="utf-8" src="http://g.tbcdn.cn/kissy/k/1.4.0/seed-min.js"></script>
-    <script type="text/javascript" src="assets/js/demo.js"></script>
+    <!-- 主题UI -->
+    <div class="k-theme-con">
+      <ul class="k-themes-ul">
+        <li><i class="icon-check"></i>主题一</li>
+        <li class="k-themes-li-check"><i class="icon-check"></i>主题二</li>
+        <li><i class="icon-check"></i>主题三</li>
+        <li><i class="icon-check"></i>主题四</li>
+        <li><i class="icon-check"></i>主题五</li>
+      </ul>
+      <i class="k-theme-arrow"></i>
+      <div class="k-theme-icon" title="更换皮肤">
+      </div>
+    </div>
+    
+    <!-- 向下的指示箭头 -->
+    <div class="k-arrow-down">
+    </div>
+    <!-- <script charset="utf-8" src="http://g.tbcdn.cn/kissy/k/1.4.0/seed-min.js"></script>
+    <script type="text/javascript" src="assets/js/demo.js"></script> -->
   </body>
 </html>
