@@ -6,6 +6,7 @@
 <!--[if (gt IE 9)|!(IE)]><!--><html><!--<![endif]-->
 <head>
 <meta charset="utf-8"/>
+<meta name="baidu-site-verification" content="kc2vd1sYCO" />
 <meta http-equiv="X-UA-Compatible" content="IE=Edge">
 <title>KCharts</title>
 <link rel="Shortcut Icon" href="favicon.ico" />
