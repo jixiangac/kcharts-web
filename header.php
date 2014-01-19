@@ -7,6 +7,8 @@
 <head>
 <meta charset="utf-8"/>
 <meta name="baidu-site-verification" content="kc2vd1sYCO" />
+<meta name="description" content="KCharts,kissy,raphael,基于Kissy的图表,数据可视化,js图表组件,KCharts是基于kissy的数据可视化组件，包含折线图、柱状图、饼图、散点图等图表，定制方便，快速上手。" />
+
 <meta http-equiv="X-UA-Compatible" content="IE=Edge">
 <title>KCharts</title>
 <link rel="Shortcut Icon" href="favicon.ico" />
