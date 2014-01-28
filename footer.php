@@ -18,5 +18,6 @@
 		<span class="powerby">Powered by Kissy 数据可视化小组</span>
 	</div>
 </div>
+<script src="http://s13.cnzz.com/stat.php?id=5806286&web_id=5806286" language="JavaScript"></script>
 </body>
 </html>
