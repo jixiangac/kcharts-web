@@ -783,7 +783,9 @@ kc-main-content .inner .chart-list .last {
     display: inline-block;
     margin-top: 110px;
 }
-
+.kc-footer .inner .powerby a{
+    color:#666;
+}
 .clearfix {
     zoom: 1;
 }
