@@ -35,10 +35,7 @@ $exit = $chartType == 'dashboard' || $chartType == 'mapchart' || $chartType == '
                     echo "cur";
                 } ?>"><a class="sider-menu mapchart" href="./lib.php?type=mapchart" chartType="mapchart">地图<i></i></a>
                 </li>
-                <li class="<?php if ($chartType == "sumdetailchart") {
-                    echo "cur";
-                } ?>"><a class="sider-menu sumdetailchart" href="./lib.php?type=sumdetailchart"
-                         chartType="sumdetailchart">画报<i></i></a></li>
+                
                 <li class="<?php if ($chartType == "radarchart") {
                     echo "cur";
                 } ?>"><a class="sider-menu radarchart" href="./lib.php?type=radarchart"
