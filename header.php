@@ -29,7 +29,7 @@
 			<li style="display:none" <?php if(strstr($location, "demo.php")){ ?>class="cur" <?php } ?>><a href="demo.php">Demo贡献</a></li>
 			<li <?php if(strstr($location, "generator.php")){ ?>class="cur" <?php } ?>><a href="generator.php">生成器</a></li>
 			<li><a target="_blank" href="http://gallery.kissyui.com/kcharts/1.3/guide/index.html?spm=0.0.0.0.WpVybg">文档</a></li>
-			<li <?php if(strstr($location, "utils.php")){ ?>class="cur" <?php } ?>><a href="utils.php">工具</a></li>
+			<li style="display:none" <?php if(strstr($location, "utils.php")){ ?>class="cur" <?php } ?>><a href="utils.php">工具</a></li>
 			<li><a href="https://github.com/kissygalleryteam/kcharts" target="_blank">github</a></li>
 			<li class="box"></li>
 		</ul>

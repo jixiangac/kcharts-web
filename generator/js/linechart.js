@@ -299,6 +299,6 @@ KISSY.add(function(S, LineChart) {
 	$("#J_btnGen").fire("click");
 }, {
 	requires: [
-		'gallery/kcharts/1.2/linechart/', 'gallery/colorPicker/1.0/', 'gallery/colorPicker/1.0/index.css'
+		'gallery/kcharts/1.3/linechart/', 'gallery/colorPicker/1.0/', 'gallery/colorPicker/1.0/index.css'
 	]
 });

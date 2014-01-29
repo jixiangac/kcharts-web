@@ -171,9 +171,7 @@ $selectedText = $texts[$selected];
                             <li class="icon-chart icon-scatterchart" data-type="散点图">
                                 <a <?php if ($selected == 'scatterchart') echo 'class="cur"' ?>
                                     href="generator/scatterchart.html" target="J_Frame"></a></li>
-                            <li class="icon-chart icon-datetime" data-type="时间线">
-                                <a <?php if ($selected == 'datetime') echo 'class="cur"' ?>
-                                    href="generator/datetime.html" target="J_Frame"></a></li>
+                            
                         </ul>
                     </div>
                 </div>

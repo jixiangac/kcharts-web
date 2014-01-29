@@ -247,6 +247,6 @@ KISSY.add(function(S, ScatterChart) {
 
 }, {
 	requires: [
-		'gallery/kcharts/1.2/scatterchart/'
+		'gallery/kcharts/1.3/scatterchart/'
 	]
 });

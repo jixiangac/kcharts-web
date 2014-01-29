@@ -10,6 +10,9 @@
 	height:300px;
 	margin:0px auto;
 }
+#demo1 .kcharts-legend-item{
+    display: inline;
+}
 </style>
 </head>
 <body>
@@ -22,38 +25,30 @@
 		var barChart = new BarChart({
 			renderTo:"#demo1",
 			legend:{
-				isShow:true,y:-10
+				isShow:true   
 			},
+            canvasAttr:{
+                x:60,
+                y:60,
+                width:650,
+                height:190
+            },
+            zoomType:"y",
 			title:{
-            	content:"Monthly Average Rainfall"
+            	content:"横向堆叠图"
             },
             anim:{},
-            subTitle:{
-            	content:"Source: WorldClimate.com"
+            stackable:true,
+			 yAxis: {
+			 		text:['周一', '周二', '周三', '周四', '周五']
             },
-            yLabels:{
+            xAxis:{
+                min:0
+            },
+             yLabels:{
                 css:{
                     "text-indent":"-4px"
                 }
-            },
-            stackable:true,
-			 xAxis: {
-			 		text:[
-			 		'Jan',
-                    'Feb',
-                    'Mar',
-                    'Apr',
-                    'May',
-                    'Jun',
-                    'Jul',
-                    'Aug',
-                    'Sep',
-                    'Oct',
-                    'Nov',
-                    'Dec']
-            },
-            yAxis:{
-            	min:0
             },
             bars:{
             	css:{
@@ -61,17 +56,14 @@
             	}
             },
 			series:[{
-                text: 'Tokyo',
-                data: [49.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5, 216.4, 194.1, 95.6, 54.4]
-    
+                text: '数据一',
+                data: [5, 3, 4, 7, 2]
             }, {
-                text: 'New York',
-                data: [83.6, 78.8, 98.5, 93.4, 106.0, 84.5, 105.0, 104.3, 91.2, 83.5, 106.6, 92.3]
-    
+                text: '数据二',
+                data: [2, 2, 3, 2, 1]
             }, {
-                text: 'London',
-                data: [48.9, 38.8, 39.3, 41.4, 47.0, 48.3, 59.0, 59.6, 52.4, 65.2, 59.3, 51.2]
-    
+                text: '数据三',
+                data: [3, 4, 4, 2, 5]
             }],
 			tip:{
 				template:"{{text}} {{y}} mm",
@@ -82,7 +74,11 @@
 				}
 			}
 		});
+
+
+
 	});
+
 })(KISSY);
 </script>
 </body>

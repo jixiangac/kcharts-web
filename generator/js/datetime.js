@@ -305,6 +305,6 @@ KISSY.add(function(S, DateTime) {
 	$("#J_btnGen").fire("click");
 }, {
 	requires: [
-		'gallery/kcharts/1.2/datetime/', 'gallery/colorPicker/1.0/', 'gallery/colorPicker/1.0/index.css'
+		'gallery/kcharts/1.3/datetime/', 'gallery/colorPicker/1.0/', 'gallery/colorPicker/1.0/index.css'
 	]
 });

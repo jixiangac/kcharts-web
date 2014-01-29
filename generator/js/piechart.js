@@ -200,5 +200,5 @@ KISSY.add(function(S,PieChart) {
 
 
 }, {
-	requires: ['gallery/kcharts/1.2/piechart/']
+	requires: ['gallery/kcharts/1.3/piechart/']
 });

@@ -298,5 +298,5 @@ KISSY.add(function(S,BarChart) {
 
 
 }, {
-	requires: ['gallery/kcharts/1.2/barchart/']
+	requires: ['gallery/kcharts/1.3/barchart/']
 });
